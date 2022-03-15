@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <!-- Mettre ici les changements de couleur des différents app bar back -->
+        <item name="colorPrimary">@color/purple_700</item>
+        <item name="colorPrimaryDark">@color/purple_500</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="color">@color/colorGray</item>
+
+    </style>
+
+    <style name="DrawerHamburgerStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/colorWhite</item>
+        <item name="android:src">@drawable/ic_ios_menu_icon</item>
+    </style>
+    <!--
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="color">@color/colorGray</item>
+
+    </style>-->
+
+    <!--<style name="DrawerHamburgerStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/colorWhite</item>
+        <item name="android:src">@drawable/ic_ios_menu_icon</item>
+    </style>-->
+
+
+    <style name="HelperStyle">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+
+</resources>

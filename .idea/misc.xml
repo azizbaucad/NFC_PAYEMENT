@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.1921875" />
+        <entry key="..\:/Users/HP/Documents/Workspaces/i-marchand/i-marchand/app/src/main/res/layout/activity_failure_splash.xml" value="0.15989583333333332" />
+        <entry key="app/src/main/res/drawable-hdpi/circle.xml" value="0.19907407407407407" />
+        <entry key="app/src/main/res/drawable-v24/rounded_button.xml" value="0.19743589743589743" />
+        <entry key="app/src/main/res/drawable/bottom_round_background.xml" value="0.19907407407407407" />
+        <entry key="app/src/main/res/drawable/button_round_background.xml" value="0.1125" />
+        <entry key="app/src/main/res/drawable/checked.xml" value="0.25025641025641027" />
+        <entry key="app/src/main/res/drawable/custom_checkbox.xml" value="0.25025641025641027" />
+        <entry key="app/src/main/res/drawable/ic_add_a_user.xml" value="0.128125" />
+        <entry key="app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/drawable/ic_ios_menu_icon.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/drawable/ic_log_out.xml" value="0.11927083333333334" />
+        <entry key="app/src/main/res/drawable/ic_nfc_icon.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/drawable/outline_circle_shape.xml" value="0.25025641025641027" />
+        <entry key="app/src/main/res/drawable/round_corners_shape.xml" value="0.25025641025641027" />
+        <entry key="app/src/main/res/drawable/round_shape.xml" value="0.10104166666666667" />
+        <entry key="app/src/main/res/drawable/roundedbutton.xml" value="0.19907407407407407" />
+        <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.25416666666666665" />
+        <entry key="app/src/main/res/layout/activity_enrollement.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_failure_splash.xml" value="0.18931159420289856" />
+        <entry key="app/src/main/res/layout/activity_list_transaction.xml" value="0.18931159420289856" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_navigation_drawer.xml" value="0.22509057971014493" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.10188191381505599" />
+        <entry key="app/src/main/res/layout/activity_splash_user_not_found.xml" value="0.18931159420289856" />
+        <entry key="app/src/main/res/layout/activity_splashunfound.xml" value="0.18931159420289856" />
+        <entry key="app/src/main/res/layout/activity_success_splash.xml" value="0.18931159420289856" />
+        <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.3541666666666667" />
+        <entry key="app/src/main/res/layout/content_login.xml" value="0.21467027706608194" />
+        <entry key="app/src/main/res/layout/content_main.xml" value="0.21331521739130435" />
+        <entry key="app/src/main/res/layout/content_navigation_drawer.xml" value="0.22395833333333334" />
+        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.22395833333333334" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.22395833333333334" />
+        <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.22395833333333334" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.21331521739130435" />
+        <entry key="app/src/main/res/layout/nav_header_navigation_drawer.xml" value="0.22509057971014493" />
+        <entry key="app/src/main/res/layout/nfctag_activity.xml" value="0.25" />
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.2719659567870727" />
+        <entry key="app/src/main/res/menu/main.xml" value="0.23802083333333332" />
+        <entry key="app/src/main/res/menu/menu.xml" value="0.23802083333333332" />
+        <entry key="app/src/main/res/menu/navigation_drawer.xml" value="0.103125" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.13020833333333334" />
+        <entry key="app/src/main/res/xml/network_security_config.xml" value="0.1015625" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

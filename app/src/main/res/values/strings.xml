@@ -1,0 +1,116 @@
+<resources>
+    <string name="app_name">Splash Screen With ProgessBar</string>
+    <!-- Titles -->
+    <string name="login_title">Login</string>
+    <string name="signup_title">Sign up</string>
+
+    <!-- Welcome messages -->
+    <string name="splash_welcome_txt">Bienvenue dans I-Marchand le paiement sans contact.</string>
+    <string name="login_welcome_tx">Hello there! \n Welcome Back </string>
+    <string name="signup_welcome_txt">Hello ther! \n welcome to you</string>
+
+    <!-- Button Labels-->
+    <string name="login_btn_label">Login</string>
+    <string name="signup_btn_label">Signup</string>
+
+    <string name="login_label">"Se connecter"</string>
+    <string name="signup_label">"Signup"</string>
+
+    <!-- We can integrate social Media Login -->
+
+    <string name="get_started_btn_label">S\’inscrire</string>
+
+    <!-- Edit Text hints -->
+    <string name="email_address_hint">Email Address</string>
+    <string name="full_name_hint">Full Name</string>
+    <string name="password_hint">Password</string>
+
+    <!-- Misc text -->
+    <string name="forgot_password">Forgot password</string>
+    <string name="no_account">Don\’t have an account?</string>
+    <string name="have_account">Have an account?</string>
+    <!--string name="divider_or">OR</string-->
+
+    <!-- string for other page -->
+    <!--string name="app_name">VerticalViewPager</string-->
+    <string name="sign_in">Sign in</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="remember_me">Remember me</string>
+    <string name="sign_with_twitter">SIGN IN WITH TWITTER</string>
+    <string name="sign_with_facebook">SIGN IN WITH FACEBOOK</string>
+    <!--<string name="forgot_password"><u>Forgot password?</u></string>-->
+    <string name="send_button">Send</string>
+    <string name="trouble_signing_in">Having trouble signing in?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="reset_forgotten_password">You’ve come to the right place to reset a forgotten password</string>
+    <string name="reset_password">Reset</string>
+    <string name="gotoCreateAcount">Don\'t Have an Account?</string>
+
+    <string name="todo">TODO</string>
+    <string name="enrolement_avec_d_p_t">Enrolement avec dépôt   </string>
+    <string name="num_ro_de_t_l_phone">Numéro de téléphone</string>
+    <string name="entrez_un_montant">Entrez un montant</string>
+    <string name="connection_text">Connexion</string>
+    <string name="to_connect_text">SE CONNECTER</string>
+    <string name="pr_nom">Prénom</string>
+    <string name="nom">Nom</string>
+    <string name="montant_d_poser">Montant à déposer</string>
+    <string name="valider">valider</string>
+    <string name="innov4africa_text">INNOV4AFRICA</string>
+    <string name="fix_amount_text">Fixer un montant</string>
+    <string name="amount_hint_text">Entrez le montant</string>
+    <string name="instruction_text">Pour payer, entrez le montant et placez la carte derrière l\'appareil</string>
+    <string name="title_activity_navigation_drawer">NavigationDrawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">IPay Marchand</string>
+    <string name="nav_header_subtitle">Paiement sans contact</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="log_out">Déconnexion</string>
+
+    <!--NFC TAG ACTIVITY-->
+    <string name="currency"> F</string>
+
+
+    <!-- <string name="app_name">Robin</string>-->
+    <!--<string name="email_hint">Email</string>-->
+    <!-- <string name="password_hint">Password</string>
+    <string name="signin">Sign In</string>
+    <string name="signup_link">Don\'t have an account? Sign up</string>
+    <string name="forgot_password">Forgot Password</string>
+-->
+    <!-- TODO: Remove or change this placeholder text -->
+    <!--<string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="full_name">Full Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="signin_link">Already have an account? Sign in</string>-->
+    <!--<string name="reset_password">Reset Password</string>-->
+    <!--<string name="remember_password">Remember your password? Login</string>-->
+
+    <string name="cardname">Montant à Payer</string>
+    <string name="cardname_helper_text">Metter la carte derrière le téléphone pour valider le paiement.</string>
+    <string name="pay">Pay</string>
+    <string name="cardno">Card No</string>
+    <string name="cardno_helper_text">You must enter your 16-digit card number.</string>
+    <string name="day_hint">12</string>
+    <string name="cardmonth">Month</string>
+    <string name="cardyear">Year</string>
+    <string name="cardcv">Cv Code</string>
+    <string name="cardyear_error_text">You must enter 2-digit characters and you\'ll enter to number the most digit-value is \'99\'</string>
+    <string name="cardmonth_error_text">You must enter 2-digit characters and you\'ll enter to number the most digit-value is \'12\'</string>
+    <string name="cardcv_error_text">You must enter 3-digit characters</string>
+    <string name="cardexpired_error_text">Your card has expired. Please enter the usage date correctly.</string>
+    <string name="solde">1000000</string>
+    <string name="Retrait">Retrait</string>
+    <string name="Transfer">Transfert</string>
+    <string name="title_action_cut">I-Marchand</string>
+
+
+</resources>

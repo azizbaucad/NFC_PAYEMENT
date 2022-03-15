@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="container_layout_margin">36dp</dimen>
+    <dimen name="btn_corners">6dp</dimen>
+    <dimen name="splash_btn_width">130dp</dimen>
+    <dimen name="divider_height">2dp</dimen>
+
+    <dimen name="ic_nav_padding_start">16dp</dimen>
+    <dimen name="layout_in_between_margins">16dp</dimen>
+    <dimen name="divider_start_and_end_margins">8dp</dimen>
+    <dimen name="divider_top_and_bottom_margins">8dp</dimen>
+<!--
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">32dp</dimen>-->
+
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="buttonHeight">60dp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+
+    <dimen name="text_size_4sp">4sp</dimen>
+    <dimen name="text_size_8sp">8sp</dimen>
+    <dimen name="text_size_12sp">12sp</dimen>
+    <dimen name="text_size_16sp">16sp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
+    <dimen name="text_size_24sp">24sp</dimen>
+    <dimen name="text_size_28sp">28sp</dimen>
+    <dimen name="text_size_32sp">32sp</dimen>
+    <dimen name="text_size_36sp">36sp</dimen>
+    <dimen name="text_size_40sp">40sp</dimen>
+    <dimen name="text_size_44sp">44sp</dimen>
+    <dimen name="text_size_50sp">50sp</dimen>
+    <dimen name="text_size_54sp">54sp</dimen>
+    <dimen name="text_size_58sp">58sp</dimen>
+    <dimen name="text_size_62sp">62sp</dimen>
+    <dimen name="text_size_66sp">66sp</dimen>
+    <dimen name="text_size_70sp">70sp</dimen>
+    <dimen name="text_size_74sp">74sp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+
+</resources>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    tools:context="appl.innov.i_marchand.EnrollementActivity"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/divider_top_and_bottom_margins"
+            android:fontFamily="@font/basic"
+            android:text="@string/dialog_default_title"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/material_emphasis_high_type"
+            android:textStyle="bold"
+            android:typeface="normal"
+            app:drawableEndCompat="@drawable/ic_add_a_user"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_round_background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bottom_round_background"
+        android:elevation="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
+        >
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="30dp"
+            android:layout_height="7dp"
+            android:src="@drawable/rounded_button"
+            app:layout_constraintBottom_toTopOf="@+id/telephone_text_input_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/telephone_text_input_layout"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/divider_top_and_bottom_margins"
+            android:backgroundTint="@color/colorWhite"
+            app:layout_constraintStart_toStartOf="@+id/prenom_text_input_layout"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/numTelTxtinscrip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_phone_black_24dp"
+                android:drawablePadding="7dp"
+                android:hint="@string/dialog_default_title"
+                android:inputType="text"
+                tools:ignore="TextFields,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/searchBnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_research"
+            app:cb_pressedRingWidth="8dip"
+            app:cb_color="#FF9800"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/telephone_text_input_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/telephone_text_input_layout"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+            android:contentDescription="TODO" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/prenom_text_input_layout"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/material_emphasis_high_type"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@+id/nom_text_input_layout"
+            app:layout_constraintStart_toStartOf="@+id/nom_text_input_layout"
+            app:layout_constraintTop_toBottomOf="@+id/telephone_text_input_layout">
+
+            <EditText
+                android:id="@+id/prenomEtudiantTxtinscrip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableEnd="@drawable/ic_user"
+                android:drawablePadding="7dp"
+                android:hint="@string/splash_welcome_txt"
+                android:inputType="text"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nom_text_input_layout"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/material_emphasis_high_type"
+            app:layout_constraintEnd_toEndOf="@+id/montant_text_input_layout"
+            app:layout_constraintStart_toStartOf="@+id/montant_text_input_layout"
+            app:layout_constraintTop_toBottomOf="@+id/prenom_text_input_layout">
+
+            <EditText
+                android:id="@+id/nonEtudiantTxtinscrip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableEnd="@drawable/ic_user"
+                android:drawablePadding="7dp"
+                android:hint="@string/signup_welcome_txt"
+                android:inputType="textPassword"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/montant_text_input_layout"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/material_emphasis_high_type"
+            app:layout_constraintEnd_toEndOf="@+id/enroler_id"
+            app:layout_constraintStart_toStartOf="@+id/enroler_id"
+            app:layout_constraintTop_toBottomOf="@+id/nom_text_input_layout">
+
+            <EditText
+                android:id="@+id/montantApayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:drawableEnd="@drawable/ic_icons8_argent_80"
+                android:drawablePadding="7dp"
+                android:hint="@string/reset_forgotten_password"
+                android:inputType="number"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/enroler_id"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/divider_top_and_bottom_margins"
+            android:background="@drawable/roundedbutton"
+            android:elevation="2dp"
+            android:text="@string/trouble_signing_in"
+            android:clickable="true"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/montant_text_input_layout"
+            android:focusable="true" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
