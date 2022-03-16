@@ -421,6 +421,8 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+
+        confirmDialog.show();
         // fin de la cration du bouton oui*
         // creation du bouton non
         confirmDialog.setCancelButton("Non", new SweetAlertDialog.OnSweetClickListener() {
@@ -429,14 +431,15 @@ public class LoginActivity extends AppCompatActivity {
 
                 //Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 //startActivity(intent);
-                nonDialog.dismissWithAnimation();
+                nonDialog.dismiss();
+                finish(); // Tuer cette activité permmettrant de quitter la page de connexion.
 
                // nonDialog.dismissWithAnimation();
 
             }
         });
 
-        confirmDialog.show();
+
         // fin de la cretaion du bouton non
         // fin de la creation
 
