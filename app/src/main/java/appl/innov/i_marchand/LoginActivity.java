@@ -403,8 +403,8 @@ public class LoginActivity extends AppCompatActivity {
 
         // Creation de ALerte Dialog pour confirmation
         SweetAlertDialog confirmDialog = new SweetAlertDialog(LoginActivity.this, SweetAlertDialog.WARNING_TYPE);
-        confirmDialog.setTitleText("Are you sure? ");
-        confirmDialog.setContentText("Tu veux forcer la connexion");
+        //confirmDialog.setTitleText("Are you sure? ");
+        confirmDialog.setContentText("Vous ètes déjàs connecté sur i-pay \n Voulez-vous poursuivre la connexion ?");
         confirmDialog.setConfirmText("Oui");
         // creation du bouton oui
         confirmDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
@@ -427,8 +427,9 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(SweetAlertDialog nonDialog) {
 
-                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                startActivity(intent);
+                //Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                //startActivity(intent);
+                nonDialog.dismissWithAnimation();
 
                // nonDialog.dismissWithAnimation();
 
