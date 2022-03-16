@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="40dp"
+    android:padding="30dp"
     tools:context=".LoginActivity">
 
     <!-- <RelativeLayout
@@ -33,7 +33,7 @@
         android:layout_height="80dp"
         android:layout_below="@+id/title"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp"/>
+        android:layout_marginTop="10dp"/>
 
     <TextView
         android:id="@+id/i-text"
@@ -110,7 +110,7 @@
         android:layout_height="90dp"
         android:layout_below="@+id/loginBtn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"/>
+        android:layout_marginTop="60dp"/>
 
     <TextView
         android:id="@+id/paiement"
@@ -118,7 +118,7 @@
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="0dp"
         android:textColor="@color/marron"
         android:text="Paiement sans contact"
         android:gravity="center"
@@ -129,14 +129,26 @@
         android:id="@+id/i-marchand"
         android:layout_below="@+id/paiement"
         android:layout_width="wrap_content"
-        android:layout_height="80dp"
+        android:layout_height="40dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="30dp"
         android:textColor="@color/marron"
         android:text="I-Marchand"
         android:gravity="center"
         android:textStyle="normal"
-        android:textSize="15sp"/>
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/i-marchand"
+        android:layout_centerHorizontal="true"
+        android:text="Copyright 2022 - Innov4Africa"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:textColor="@color/marron"
+        android:layout_marginTop="10dp"
+        />
 
 
 
