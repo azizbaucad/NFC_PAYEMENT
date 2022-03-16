@@ -67,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
 
     // private Button bouton_connect;
     private EditText passwordText;
-
+    // La fonction Principale on Create
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,49 +80,68 @@ public class LoginActivity extends AppCompatActivity {
 
         Button btn_con = findViewById(R.id.loginBtn);
 
-        btn_con.setOnClickListener(new View.OnClickListener() {
+        btn_con.setOnClickListener(v -> {
+            // Mettre les traitements ici
+            if (loginEdit.getText().length() != 0 && !loginEdit.getText().toString().equals("")) {
+               if (passwordText.getText().length() != 0 && !passwordText.getText().toString().equals("")) {
+                   broadcastIntent();
+                   AsyncCallWS task = new AsyncCallWS();
+                   task.execute();
+               }
+               // Si le Mot de passe est vide
+                else {
+                    passwordText.setError("Entrer le mot de passe");
+               }
+            } else {
+                passwordText.setError("Entrer le Login");
+            }
+        });
+        // fin de la connexion
+
+        /*btn_con.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(LoginActivity.this,
+                *//*Intent intent = new Intent(LoginActivity.this,
                         Test_NFC_Tag_Activity.class);
 
-                startActivity(intent);
+                startActivity(intent);*//*
                 // close this activity
                 // finish(); // terminer l'activité ou non
 
             }
-        });
+        });*/
     }
 
-    // on doit creer la fonction onPause
+
+
 
     // creer la fonction boradcastIntent
     private void broadcastIntent() {
         registerReceiver(MyReceiver, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
 
     }
+    // fin de la fonction braodcastIntent
 
+    // creation de la fonction onPause
     @Override
     protected void onPause() {
         super.onPause();
         // Do Something
     }
-    // fin de la classe AsyncCallWSDeconnexion
+    // fin de la fonction onPause
 
     // creer la fonction AsyncCallWSDeconnexion pour appeler le WS
     class AsyncCallWSDeconnexion extends AsyncTask<String, Void, String> {
-
         // creons le ProgressDialog
         private final ProgressDialog Dialog = new ProgressDialog(LoginActivity.this);
-
         // la fonction doInBAckground
         @Override
         protected String doInBackground(String... url) {
             // la fonction deconnexionUser doit etre appelé ici
+            deconnexionUser();
             return null;
         }
-
         // La fonction onPreExecute
         @Override
         protected void onPreExecute() {
@@ -130,16 +149,14 @@ public class LoginActivity extends AppCompatActivity {
             Dialog.setMessage("ChargementLoading....");
             Dialog.show();
         }
-
         //La fonction onPostExecute
-
         @Override
         protected void onPostExecute(String result) {
             //super.onPostExecute(s);
             Dialog.dismiss();
         }
     }
-
+    // fin de la classe AsyncCallWSDeconnexion
 
     // créaton de la classe AsyncCallWS
     class AsyncCallWS extends AsyncTask<String, Void, String> {
@@ -150,6 +167,7 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... url) {
             //La fonction loginAction doit etre appelé
+            loginAction();
             return null;
         }
 
@@ -268,12 +286,16 @@ public class LoginActivity extends AppCompatActivity {
                 }
             } else if (erreur.equals("13")) {
                 // Doit appeler la fonction OnUserSession
+                runOnUiThread(this::OnUserSession);
             } else if (erreur.equals("10")) {
                 // Doit appeler la fonction changePasswordDialog
+                runOnUiThread(this::changePasswordDialog);
             } else if (erreur.equals("11")) {
                 // Doit appeler la fonction changeOTPDialog
+                runOnUiThread(this::changeOTPDialog);
             } else {
                 // Doit appeler la fonction ErrorLogin
+                runOnUiThread(this::ErrorLogin);
             }
 
         } catch (Exception e) {
@@ -281,15 +303,13 @@ public class LoginActivity extends AppCompatActivity {
         }
 
     }
-
     // Fin de la fonction LoginAction
 
     // La fonction deconnexionSucces
     public void deconnexionSucces() {
 
     }
-
-    // fin de la fonction
+    // fin de la fonction deconnexionSuccess
 
     // Création de la fonction deconnexionUser
     public void deconnexionUser(){
@@ -343,7 +363,7 @@ public class LoginActivity extends AppCompatActivity {
     }
     // Fin de la fonction deconnexionUser
 
-    // Creation de la fonction : vous n test pas un client
+    // Creation de la fonction youAreNotCostumer : vous n test pas un client
     public void youAreNotCostumer() {
         AlertDialog alertDialog = new AlertDialog.Builder(LoginActivity.this).create();
         alertDialog.setTitle("Alerte");
@@ -358,11 +378,9 @@ public class LoginActivity extends AppCompatActivity {
                 });
         alertDialog.show();
     }
-
     // Fin de la fonction youAreNotCostumer
 
     // Creation de le fonction OnUserSession pour gérer les sessions des utilisateurs
-
     public void OnUserSession() {
         // créer un AlertDialog
         AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
@@ -371,12 +389,104 @@ public class LoginActivity extends AppCompatActivity {
         // Demande la question final
         builder.setMessage("Vous etes déjà connecté sur i-pay, Voulez-vous forcer la connexion ?");
         // Modifier les buttons de confirmation de l'alertDialog
-        //builder.setPositiveButton("oui", new Dialo)
+        builder.setPositiveButton("oui", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
 
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent i = new Intent(getApplicationContext(), Test_NFC_Tag_Activity.class);
+                        startActivity(i);
+                    }
+                });
 
+                dialog.dismiss();
+            }
+        });
+
+        // Modifier le button dialog alert par la reponse no
+        builder.setNegativeButton("non", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        // Display the alert dialog on interface
+        dialog.show();
     }
-
     // fin de la fonction OnUserSession
+
+    // Création de la fonction ErrorLogin
+    public void ErrorLogin() {
+        AlertDialog alertDialog = new AlertDialog.Builder(LoginActivity.this).create();
+        alertDialog.setTitle("Alerte");
+        alertDialog.setIcon(R.drawable.ic_cross);
+        alertDialog.setMessage("Identifiants Incorrects");
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok",
+                new DialogInterface.OnClickListener() {
+            //@Override
+            public void onClick(DialogInterface dialog, int which) {
+                  dialog.dismiss();
+            }
+        });
+        alertDialog.show();
+    }
+    // Fin de la fonction ErrorLogin
+
+    // Creation de la fonction outOfSession
+    public void outOfSession() {
+        AlertDialog alertDialog = new AlertDialog.Builder(LoginActivity.this).create();
+        alertDialog.setTitle("Alerte");
+        alertDialog.setIcon(R.drawable.ic_alert);
+        alertDialog.setMessage("Votre session a expiré ! Veuillez vous reconnecter !");
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok",
+                new DialogInterface.OnClickListener() {
+                    //@Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.show();
+    }
+    // fin de la fonction outOfSession
+
+    // Creation de la fonction changePasswordDialog
+    public void changePasswordDialog() {
+        AlertDialog alertDialog = new AlertDialog.Builder(LoginActivity.this).create();
+        alertDialog.setTitle("Alerte");
+        alertDialog.setIcon(R.drawable.ic_alert);
+        alertDialog.setMessage("Veuillez changer votre mot de passe !");
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                new DialogInterface.OnClickListener() {
+                    //@Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.show();
+    }
+    // fin de la fonction changePasswordDialog
+
+    // Creation de la fonction changeOTPDialog
+    public void changeOTPDialog() {
+        AlertDialog alertDialog = new AlertDialog.Builder(LoginActivity.this).create();
+        alertDialog.setTitle("Alerte");
+        alertDialog.setIcon(R.drawable.ic_alert);
+        alertDialog.setMessage("Merci d'aller sur i-pay.africa pour veérifier votre mail et/ou votre OTP. ");
+        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
+        alertDialog.show();
+    }
+    // fin de la fonction changeOTPDialog
 
 
 }
