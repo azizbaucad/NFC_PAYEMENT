@@ -469,11 +469,13 @@
                 <Button
                     android:id="@+id/btn_pay"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
                     android:layout_marginTop="0dp"
                     android:backgroundTint="#FF3D00"
                     android:fontFamily="sans-serif-black"
-                    android:padding="10dp"
+                    android:layout_margin="1dp"
+                    android:padding="7.5dp"
                     android:text="@string/pay"
                     android:textColor="@android:color/white"
                     android:textSize="18sp" />
@@ -481,23 +483,24 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/carView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="0dp"
+                    android:padding="0dp"
                     android:layout_marginTop="0dp"
                     app:cardBackgroundColor="#FFFFFF"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="2.5dp"
-                    app:cardMaxElevation="10dp"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="2dp"
+                    app:cardMaxElevation="0dp"
                     app:cardPreventCornerOverlap="true"
                     app:cardUseCompatPadding="true">
 
                     <RelativeLayout
                         android:id="@+id/list_item_lin"
                         android:layout_width="match_parent"
-                        android:layout_height="78dp"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="0dp"
+                        android:padding="10dp"
                         android:background="#FFFFFF"
-                        android:gravity="center_vertical"
                         android:orientation="horizontal">
 
 
@@ -506,12 +509,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:fontFamily="sans-serif"
-                            android:gravity="left"
-                            android:padding="10.5dp"
+                            android:padding="5dp"
                             android:text="@string/Transfer"
                             android:textAllCaps="false"
-                            android:textColor="@android:color/black"
-                            android:textSize="15sp"
+                            android:textColor="@color/marron"
+                            android:textSize="18sp"
 
                             />
 
@@ -523,29 +525,29 @@
                             android:layout_marginTop="0dp"
                             android:fontFamily="sans-serif"
                             android:gravity="right"
-                            android:padding="10.5dp"
+                            android:padding="5dp"
                             android:text="@string/solde"
                             android:textAllCaps="false"
-                            android:textColor="@android:color/black"
-                            android:textSize="15sp"
+                            android:textColor="@color/marron"
+                            android:textSize="18sp"
 
                             />
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="horizontal">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="18dp"
+                                android:layout_marginTop="20dp"
                                 android:gravity="left"
-                                android:padding="16.5dp"
-                                android:text="01/10/2022"
+                                android:padding="10dp"
+                                android:text="mars 14, 19:58"
                                 android:textAllCaps="false"
-                                android:textColor="@android:color/black"
-                                android:textSize="10sp" />
+                                android:textColor="@color/colorGray"
+                                android:textSize="15sp" />
                         </LinearLayout>
 
 
@@ -554,10 +556,10 @@
                     <RelativeLayout
                         android:id="@+id/list_item_lin"
                         android:layout_width="match_parent"
-                        android:layout_height="78dp"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="60dp"
+                        android:padding="10dp"
                         android:background="#FFFFFF"
-                        android:gravity="center_vertical"
                         android:orientation="horizontal">
 
 
@@ -566,12 +568,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:fontFamily="sans-serif"
-                            android:gravity="left"
-                            android:padding="10.5dp"
+                            android:padding="5dp"
                             android:text="@string/Retrait"
                             android:textAllCaps="false"
-                            android:textColor="@android:color/black"
-                            android:textSize="15sp"
+                            android:textColor="@color/marron"
+                            android:textSize="18sp"
 
                             />
 
@@ -583,29 +584,29 @@
                             android:layout_marginTop="0dp"
                             android:fontFamily="sans-serif"
                             android:gravity="right"
-                            android:padding="10.5dp"
-                            android:text="@string/solde"
+                            android:padding="5dp"
+                            android:text="-50000"
                             android:textAllCaps="false"
-                            android:textColor="@android:color/black"
-                            android:textSize="15sp"
+                            android:textColor="@color/marron"
+                            android:textSize="18sp"
 
                             />
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="horizontal">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="18dp"
+                                android:layout_marginTop="20dp"
                                 android:gravity="left"
-                                android:padding="16.5dp"
-                                android:text="01/10/2022"
+                                android:padding="10dp"
+                                android:text="mars 14, 19:58"
                                 android:textAllCaps="false"
-                                android:textColor="@android:color/black"
-                                android:textSize="10sp" />
+                                android:textColor="@color/colorGray"
+                                android:textSize="15sp" />
                         </LinearLayout>
 
 
@@ -614,10 +615,10 @@
                     <RelativeLayout
                         android:id="@+id/list_item_lin"
                         android:layout_width="match_parent"
-                        android:layout_height="78dp"
-                        android:layout_marginTop="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="120dp"
+                        android:padding="10dp"
                         android:background="#FFFFFF"
-                        android:gravity="center_vertical"
                         android:orientation="horizontal">
 
 
@@ -626,12 +627,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:fontFamily="sans-serif"
-                            android:gravity="left"
-                            android:padding="10.5dp"
-                            android:text="@string/Retrait"
+                            android:padding="5dp"
+                            android:text="@string/Transfer"
                             android:textAllCaps="false"
-                            android:textColor="@android:color/black"
-                            android:textSize="15sp"
+                            android:textColor="@color/marron"
+                            android:textSize="18sp"
 
                             />
 
@@ -643,29 +643,29 @@
                             android:layout_marginTop="0dp"
                             android:fontFamily="sans-serif"
                             android:gravity="right"
-                            android:padding="10.5dp"
-                            android:text="@string/solde"
+                            android:padding="5dp"
+                            android:text="2500"
                             android:textAllCaps="false"
-                            android:textColor="@android:color/black"
-                            android:textSize="15sp"
+                            android:textColor="@color/marron"
+                            android:textSize="18sp"
 
                             />
 
                         <LinearLayout
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="horizontal">
 
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="18dp"
+                                android:layout_marginTop="20dp"
                                 android:gravity="left"
-                                android:padding="16.5dp"
-                                android:text="01/10/2022"
+                                android:padding="10dp"
+                                android:text="mars 14, 19:58"
                                 android:textAllCaps="false"
-                                android:textColor="@android:color/black"
-                                android:textSize="10sp" />
+                                android:textColor="@color/colorGray"
+                                android:textSize="15sp" />
                         </LinearLayout>
 
 
