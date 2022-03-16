@@ -400,14 +400,53 @@ public class LoginActivity extends AppCompatActivity {
 
     // Creation de le fonction OnUserSession pour gérer les sessions des utilisateurs
     public void OnUserSession() {
+
+        // Creation de ALerte Dialog pour confirmation
+        SweetAlertDialog confirmDialog = new SweetAlertDialog(LoginActivity.this, SweetAlertDialog.WARNING_TYPE);
+        confirmDialog.setTitleText("Are you sure? ");
+        confirmDialog.setContentText("Tu veux forcer la connexion");
+        confirmDialog.setConfirmText("Oui");
+        // creation du bouton oui
+        confirmDialog.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+            @Override
+            public void onClick(SweetAlertDialog oui) {
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Intent i = new Intent(getApplicationContext(), Test_NFC_Tag_Activity.class);
+                        startActivity(i);
+                    }
+                });
+
+            }
+        });
+        // fin de la cration du bouton oui*
+        // creation du bouton non
+        confirmDialog.setCancelButton("Non", new SweetAlertDialog.OnSweetClickListener() {
+            @Override
+            public void onClick(SweetAlertDialog nonDialog) {
+
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+
+               // nonDialog.dismissWithAnimation();
+
+            }
+        });
+
+        confirmDialog.show();
+        // fin de la cretaion du bouton non
+        // fin de la creation
+
         // créer un AlertDialog
-        AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+        //AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
         // Modifier le titre de l'alerte Dialog
-        builder.setTitle("Alerte");
+       // builder.setTitle("Alerte");
         // Demande la question final
-        builder.setMessage("Vous etes déjà connecté sur i-pay, Voulez-vous forcer la connexion ?");
+      //  builder.setMessage("Vous etes déjà connecté sur i-pay, Voulez-vous forcer la connexion ?");
         // Modifier les buttons de confirmation de l'alertDialog
-        builder.setPositiveButton("oui", new DialogInterface.OnClickListener() {
+        /*builder.setPositiveButton("oui", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
@@ -421,26 +460,34 @@ public class LoginActivity extends AppCompatActivity {
 
                 dialog.dismiss();
             }
-        });
+        });*/
 
         // Modifier le button dialog alert par la reponse no
-        builder.setNegativeButton("non", new DialogInterface.OnClickListener() {
+        /*builder.setNegativeButton("non", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
-        AlertDialog dialog = builder.create();
+      //  AlertDialog dialog = builder.create();
         // Display the alert dialog on interface
-        dialog.show();
+     //   dialog.show();
     }
     // fin de la fonction OnUserSession
 
     // Création de la fonction ErrorLogin
     public void ErrorLogin() {
-        AlertDialog alertDialog = new AlertDialog.Builder(LoginActivity.this).create();
+
+        // Mettre le Sweet Alert Dialog Error Message
+        SweetAlertDialog sDialog = new SweetAlertDialog(LoginActivity.this, SweetAlertDialog.ERROR_TYPE);
+        //sDialog.setTitleText("");
+        sDialog.setContentText("Téléphone ou Mot de passe Incorrect !");
+        sDialog.setCancelable(false);
+        sDialog.show();
+
+/*AlertDialog alertDialog = new AlertDialog.Builder(LoginActivity.this).create();
         alertDialog.setTitle("Alerte");
         alertDialog.setIcon(R.drawable.ic_cross);
         alertDialog.setMessage("Identifiants Incorrects");
@@ -451,7 +498,8 @@ public class LoginActivity extends AppCompatActivity {
                   dialog.dismiss();
             }
         });
-        alertDialog.show();
+        alertDialog.show();*/
+
     }
     // Fin de la fonction ErrorLogin
 
