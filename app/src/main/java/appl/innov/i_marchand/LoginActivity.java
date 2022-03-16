@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -30,6 +31,7 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 
 import appl.innov.i_marchand.helper.DatabaseHelper;
+import cn.pedant.SweetAlert.SweetAlertDialog;
 
 import static org.apache.http.conn.ssl.SSLSocketFactory.SSL;
 
@@ -161,7 +163,11 @@ public class LoginActivity extends AppCompatActivity {
     // créaton de la classe AsyncCallWS
     class AsyncCallWS extends AsyncTask<String, Void, String> {
         // Mettre le ProgressDialog
-        private final ProgressDialog Dialog = new ProgressDialog(LoginActivity.this);
+        //private final ProgressDialog Dialog = new ProgressDialog(LoginActivity.this);
+
+        // Tester le SweetAlert
+        //private final SweetAlertDialog pDialog = new SweetAlertDialog(LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
+        SweetAlertDialog pDialog = new SweetAlertDialog(LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
 
         //La fonction doInBackground
         @Override
@@ -175,8 +181,18 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             //super.onPreExecute();
-            Dialog.setMessage("ChargmentLoadingLoginAction...");
-            Dialog.show();
+            //Dialog.setMessage("ChargmentLoadingLoginAction...");
+            //Dialog.show();
+            // Mettre les traitements du SweetAlertDialog
+            /*pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
+            pDialog.setTitleText("Chargement");
+            pDialog.setCancelable(false);
+            pDialog.show();*/
+            pDialog.getProgressHelper().setBarColor(Color.parseColor("#FF3D00"));
+            pDialog.setTitleText("Chargement...");
+            pDialog.setCancelable(false);
+            pDialog.show();
+
         }
 
         //La fonction onPostExecute
@@ -184,7 +200,9 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(String result) {
             //super.onPostExecute(s);
-            Dialog.dismiss();
+            //Dialog.dismiss();
+            //pDialog.dismiss();
+            pDialog.dismiss();
         }
     }
     // Fin de la fonction AsyncCallWS
