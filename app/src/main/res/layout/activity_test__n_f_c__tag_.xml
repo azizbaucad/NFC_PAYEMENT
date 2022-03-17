@@ -44,8 +44,7 @@
         <RelativeLayout
             android:id="@+id/rl_form"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
+            android:layout_height="200dp"
             android:layout_marginTop="0dp"
             android:background="#5EFF9100">
 
@@ -94,12 +93,12 @@
 
             <RelativeLayout
                 android:id="@+id/rl_front"
-                android:layout_width="match_parent"
-                android:layout_height="302.2dp"
-                android:layout_centerInParent="false"
-                android:layout_marginTop="0dp"
-                android:layout_margin="30dp"
-                android:padding="10dp"
+                android:layout_width="320dp"
+                android:layout_height="300dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="30dp"
+                android:layout_margin="0dp"
+                android:padding="0dp"
                 android:alpha="1"
                 android:background="@drawable/frontdebit"
                 android:backgroundTint="@android:color/white"
@@ -107,27 +106,15 @@
                 android:visibility="visible">
 
 
-
-
-                <ImageView
-                    android:id="@+id/iv_card_type"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_marginRight="30dp"
-                    android:layout_marginBottom="50dp"
-                    android:src="@drawable/chip" />
-
                 <LinearLayout
-                    android:id="@+id/lv_card_layout"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:layout_above="@+id/iv_card_type"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="40sp"
-                    android:layout_marginBottom="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="20dp"
                     android:orientation="horizontal">
+
 
                     <!--<ImageView
                         android:layout_width="40dp"
@@ -184,39 +171,72 @@
                         android:maxEms="10"
 
                         />-->
-
-
+                    <ImageView
+                        android:id="@+id/chip01"
+                        android:layout_width="140dp"
+                        android:layout_marginTop="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:src="@drawable/chip" />
                     <TextView
-                        android:id="@+id/tv_card_three"
+                        android:id="@+id/solde"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
+                        android:layout_marginTop="30dp"
                         android:fontFamily="@font/credit_font"
                         android:gravity="left"
                         android:layout_alignParentLeft="true"
                         android:padding="0dp"
+                        android:lines="1"
                         android:text="Solde"
                         android:textAllCaps="true"
                         android:textColor="@android:color/black"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
 
                         />
 
                     <TextView
                         android:id="@+id/tv_card_four"
-                        android:layout_width="100dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="30dp"
                         android:layout_weight="1"
                         android:fontFamily="@font/credit_font"
-                        android:lines="1"
                         android:gravity="right"
-                        android:layout_alignParentRight="true"
+                        android:lines="1"
                         android:padding="0dp"
-                        android:text="1000000"
+                        android:text="0123456789"
                         android:textColor="@android:color/black"
-                        android:textSize="20sp" />
+                        android:textSize="18sp" />
+
+
+
+
                 </LinearLayout>
+
+                <!--<LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="60dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40sp"
+                    android:layout_marginBottom="0dp"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/iv_card_type"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/chip" />
+
+                </LinearLayout>-->
 
                 <!--<TextView
                     android:layout_width="match_parent"
@@ -244,15 +264,15 @@
                     android:background="@android:color/white"
                     android:src="@drawable/chip"/>-->
 
-                <LinearLayout
+                <!--<LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignLeft="@+id/lv_card_layout"
                     android:layout_alignTop="@+id/iv_card_type"
                     android:layout_alignBottom="@+id/iv_card_type"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal">-->
 
-                    <TextView
+                    <!--<TextView
                         android:id="@+id/tv_card_month"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -261,9 +281,9 @@
                         android:gravity="center"
                         android:text="12"
                         android:textColor="@android:color/black"
-                        android:textSize="13sp" />
+                        android:textSize="13sp" />-->
 
-                    <TextView
+                    <!--<TextView
                         android:id="@+id/tv_bracket"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -274,9 +294,9 @@
                         android:gravity="center"
                         android:text="/"
                         android:textColor="@android:color/black"
-                        android:textSize="13sp" />
+                        android:textSize="13sp" />-->
 
-                    <TextView
+                    <!--<TextView
                         android:id="@+id/tv_card_year"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -285,9 +305,9 @@
                         android:gravity="center"
                         android:text="20"
                         android:textColor="@android:color/black"
-                        android:textSize="13sp" />
+                        android:textSize="13sp" />-->
 
-                </LinearLayout>
+               <!-- </LinearLayout>-->
 
 
             </RelativeLayout>
@@ -448,8 +468,7 @@
                     android:hint="@string/cardname"
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/black"
-                    app:helperText="@string/cardname_helper_text"
-                    app:helperTextTextAppearance="@style/HelperStyle">
+                    >
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/tev_card_name"
@@ -474,11 +493,27 @@
                     android:layout_marginTop="0dp"
                     android:backgroundTint="#FF3D00"
                     android:fontFamily="sans-serif-black"
-                    android:layout_margin="1dp"
-                    android:padding="7.5dp"
-                    android:text="@string/pay"
+                    android:layout_margin="0dp"
+                    android:padding="10dp"
+                    android:textAllCaps="false"
+                    android:text="@string/payNFC"
                     android:textColor="@android:color/white"
-                    android:textSize="18sp" />
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/btn_pay"
+                    android:textAllCaps="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="0dp"
+                    android:backgroundTint="#FF3D00"
+                    android:fontFamily="sans-serif-black"
+                    android:layout_margin="0dp"
+                    android:padding="10dp"
+                    android:text="@string/payTel"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp" />
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/carView"

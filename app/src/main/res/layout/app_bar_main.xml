@@ -494,7 +494,7 @@
                     android:backgroundTint="#FF3D00"
                     android:fontFamily="sans-serif-black"
                     android:padding="10dp"
-                    android:text="@string/pay"
+                    android:text="@string/payNFC"
                     android:textColor="@android:color/white"
                     android:textSize="18sp" />
 

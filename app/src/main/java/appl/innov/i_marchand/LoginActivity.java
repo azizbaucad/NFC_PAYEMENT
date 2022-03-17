@@ -82,6 +82,8 @@ public class LoginActivity extends AppCompatActivity {
 
         Button btn_con = findViewById(R.id.loginBtn);
 
+
+        // Filtre du login et du Mot de passe : Le bon Filtre
         btn_con.setOnClickListener(v -> {
             // Mettre les traitements ici
             if (loginEdit.getText().length() != 0 && !loginEdit.getText().toString().equals("")) {

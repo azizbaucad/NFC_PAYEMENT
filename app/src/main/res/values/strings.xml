@@ -96,7 +96,8 @@
 
     <string name="cardname">Montant à Payer</string>
     <string name="cardname_helper_text">Metter la carte derrière le téléphone pour valider le paiement.</string>
-    <string name="pay">Pay</string>
+    <string name="payNFC">Payer par NFC</string>
+    <string name="payTel">Payer par Telephone</string>
     <string name="cardno">Card No</string>
     <string name="cardno_helper_text">You must enter your 16-digit card number.</string>
     <string name="day_hint">12</string>
