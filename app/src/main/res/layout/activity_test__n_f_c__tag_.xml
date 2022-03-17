@@ -486,7 +486,7 @@
 
 
                 <Button
-                    android:id="@+id/btn_pay"
+                    android:id="@+id/btn_pay_nfc"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical"
