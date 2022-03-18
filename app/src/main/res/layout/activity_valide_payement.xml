@@ -3,69 +3,100 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="500dp"
     android:background="#FFFFFF"
     tools:context=".ValidePayementActivity">
 
-    <RelativeLayout
+    <LinearLayout
+        android:padding="1dp"
         android:id="@+id/rlBack"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/marron">
 
         <ImageView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:id="@+id/btn_back_img"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="5dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
-            android:padding="15dp"
+            android:padding="10dp"
             android:scaleType="fitXY"
-            android:src="@drawable/back_button"
+            android:src="@drawable/back01"
             android:contentDescription="Retour"
             android:layout_alignParentStart="true"/>
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Read With NFC Tag"
-            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
             android:gravity="center"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"/>
-    </RelativeLayout>
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="100dp"
+            android:text="Paiement par NFC"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
 
+    <ImageView
+        android:id="@+id/imgRead"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_margin="0dp"
+        android:layout_marginTop="80dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/nfc08" />
+    <TextView
+        android:id="@+id/solde"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/imgRead"
+        android:text="2 000"
+        android:textColor="@color/marron"
+        android:textSize="20sp"
+        android:fontFamily="@font/credit_font"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginStart="10dp" />
     <TextView
         android:id="@+id/tvText"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@+id/img"
+        android:layout_below="@+id/solde"
         android:text="Metter la carte derrière l'appareil pour effectuer le Paiement"
         android:textColor="#000000"
         android:textSize="15sp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:layout_marginLeft="10dp"
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:layout_marginStart="10dp" />
 
-    <RelativeLayout
-        android:id="@+id/img"
+    <!--<RelativeLayout
+        android:id="@+id/gif"
         android:layout_below="@+id/rlBack"
         android:layout_width="match_parent"
-        android:layout_marginTop="150dp"
-        android:layout_height="300dp"
+        android:layout_marginTop="80dp"
+        android:layout_height="100dp"
+        android:gravity="center"
         >
 
-        <pl.droidsonroids.gif.GifImageView
+        <ImageView
             android:id="@+id/imgRead"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_margin="0dp"
             android:layout_marginTop="0dp"
             android:layout_centerInParent="true"
-            android:src="@drawable/img_card" />
+            android:src="@drawable/nfc06" />
 
 
 
 
-    </RelativeLayout>
+    </RelativeLayout>-->
 
 </RelativeLayout>

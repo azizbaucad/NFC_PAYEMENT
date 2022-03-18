@@ -6,7 +6,7 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>-->
     <!--<color name="black">#FF000000</color>-->
-    <color name="marron">#5f0c0c</color>
+    <color name="marron">#C85F0C0C</color>
     <!--<color name="white">#FFFFFFFF</color>-->
 
     <color name="colorWhite">#FFFFFFFF</color>
@@ -27,8 +27,8 @@
     <color name="account">#999999</color>
 
     <color name="alternative_white_light">#EEE</color>
-    <color name="purple_500">#FF3D00</color>
-    <color name="purple_700">#FF3D00</color>
+    <color name="purple_500">#C85F0C0C</color>
+    <color name="purple_700">#C85F0C0C</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
