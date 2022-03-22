@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"
+    android:padding="20dp"
     tools:context=".LoginActivity">
 
     <!-- <RelativeLayout
@@ -26,95 +26,90 @@
         android:textStyle="bold"
         android:textSize="22sp"/>-->
 
-   <!-- <ImageView
+    <ImageView
         android:id="@+id/logo"
         android:src="@drawable/logo"
         android:layout_width="80dp"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_below="@+id/title"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp"/>-->
+        android:layout_marginTop="10dp"/>
 
-    <TextView
+    <!--<TextView
         android:id="@+id/i-text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:layout_below="@+id/logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:textColor="@color/marron"
         android:text="Connexion"
         android:textStyle="normal"
 
-        android:textSize="22sp"/>
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/emailOubTxt"
-        android:layout_below="@+id/i-text"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginTop="30dp"
-        android:hint="Téléphone"
-        android:paddingEnd="12dp"
-        android:drawableRight="@drawable/modern_icon_phone"
-        android:drawablePadding="0dp"
-        android:inputType="number"
-        android:textSize="22sp"
-        android:textColor="@color/black"/>
+        android:textSize="22sp"/>-->
 
 
-    <!--<EditText
+    <EditText
         android:id="@+id/emailOubTxt"
         android:layout_below="@+id/logo"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="50dp"
         android:hint="Téléphone"
         android:ems="10"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
         android:background="@drawable/custom_input"
         android:drawablePadding="12dp"
-        android:drawableStart="@drawable/custom_email_icon"
         android:inputType="number"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />-->
-
-    <com.google.android.material.textfield.TextInputEditText
+        app:layout_constraintTop_toTopOf="parent"
+        android:drawableRight="@drawable/modern_icon_phone"/>
+    <EditText
         android:id="@+id/passworOubTxt"
         android:layout_below="@+id/emailOubTxt"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="0dp"
-        android:hint="Mot de passe"
+        android:layout_marginTop="10dp"
+        android:hint="Password"
+        android:ems="10"
+        android:paddingStart="12dp"
         android:paddingEnd="12dp"
-        android:drawableRight="@drawable/modern_icon_password"
-        android:drawablePadding="0dp"
-        android:inputType="number"
-        android:textSize="22sp"
-        android:textColor="@color/black"/>
+        android:background="@drawable/custom_input"
+        android:drawablePadding="12dp"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:drawableRight="@drawable/modern_icon_password"/>
     <Button
         android:id="@+id/loginBtn"
         app:backgroundTint="@color/purple_500"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_below="@+id/passworOubTxt"
-        android:drawablePadding="0dp"
-        android:background="@drawable/stroke_bg"
-        android:layout_marginTop="0dp"
+        android:drawablePadding="12dp"
+        android:ems="10"
+        android:background="@drawable/custom_input"
+        android:layout_marginTop="10dp"
         android:text="Se connecter"
         android:textSize="20dp"
-        android:layout_margin="0dp"
-        android:padding="0dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/logo01"
-        android:src="@drawable/logo"
+        android:src="@drawable/nfc_icon_tag"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:layout_below="@+id/loginBtn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp"/>
+        android:layout_marginTop="10dp"/>
 
     <TextView
         android:id="@+id/paiement"
@@ -135,7 +130,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="30dp"
         android:textColor="@color/marron"
         android:text="I-Marchand"
         android:gravity="center"
@@ -151,7 +146,7 @@
         android:textSize="15dp"
         android:gravity="center"
         android:textColor="@color/marron"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="10dp"
         />
 
 

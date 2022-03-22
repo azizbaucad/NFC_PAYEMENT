@@ -41,8 +41,9 @@ import appl.innov.i_marchand.NFCManager.NFCWriteException;
 import appl.innov.i_marchand.helper.DatabaseHelper;
 
 public class NFCTagActivity extends AppCompatActivity implements
-        NFCManager.TagReadListener, NFCManager.TagWriteListener, NFCManager.TagWriteErrorListener,
-        NavigationView.OnNavigationItemSelectedListener {
+    NFCManager.TagReadListener, NFCManager.TagWriteListener, NFCManager.TagWriteErrorListener,
+    NavigationView.OnNavigationItemSelectedListener {
+    // Déclarations des variables
     DatabaseHelper myDb;
     EditText montant_a_payer;
     String montantaPayer;
@@ -53,6 +54,7 @@ public class NFCTagActivity extends AppCompatActivity implements
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle toggle;
     Toolbar toolbar;
+
     public static final String DATA_TO_WRITE_KEY = "DATA_TO_WRITE";
     public static final int READ_REQUEST_CODE = 1;
     public static final int WRITE_REQUEST_CODE = 2;
@@ -65,10 +67,14 @@ public class NFCTagActivity extends AppCompatActivity implements
     private Handler timer;
     private NFCManager nfcManager;
 
+    // fin de la déclaration des variables
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nfctag_activity);
+
+        // Initialisation des variables
         montant_a_payer = findViewById(R.id.montantApayer);
         myDb = new DatabaseHelper(this);
         soldeText = findViewById(R.id.soldeId);
@@ -80,19 +86,16 @@ public class NFCTagActivity extends AppCompatActivity implements
         toggle = new ActionBarDrawerToggle(
                 this, drawerLayout, toolbar, R.string.navigation_drawer_open,
                 R.string.navigation_drawer_close
-        ) {
-
-        };
-
+        ) {};
 
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.colorWhite));
-
         toggle.setHomeAsUpIndicator(R.drawable.ic_ios_menu_icon);
 
+        // fonction on click pour voir la list des transactions
         soldeText.setOnClickListener(
                 v -> {
                     runOnUiThread(() -> {
@@ -101,8 +104,9 @@ public class NFCTagActivity extends AppCompatActivity implements
                     });
                 }
         );
+        // Fin de la visualisation de la liste des Transactions
 
-
+        // Button on Clikc permettant de fixer le montant de la variable à ajouter
         fixAmount.setOnClickListener(v -> {
             if (fixAmount.isChecked()) {
                 Intent i = new Intent(NFCTagActivity.this.getApplicationContext(), Activityfixrmontant.class);
@@ -112,7 +116,9 @@ public class NFCTagActivity extends AppCompatActivity implements
             }
 
         });
+        // Fin du button pour fixer la variables
 
+        // Initialisation des variables liées au Tag NFC
         this.dataToWrite = this.getIntent().getStringExtra(NFCTagActivity.DATA_TO_WRITE_KEY);
         this.dataCustom = this.getIntent().getStringExtra(NFCTagActivity.ACTION_DATA_CUSTOM);
 
@@ -123,40 +129,42 @@ public class NFCTagActivity extends AppCompatActivity implements
         this.nfcManager.setOnTagReadListener(this);
         this.nfcManager.setOnTagWriteListener(this);
         this.nfcManager.setOnTagWriteErrorListener(this);
-
+        // Fin de l'initialisation des var liées au Tag
+        // Condition de la lecture/Ecriture du Tag
         if (!this.isReadingMode()) {
             this.nfcManager.writeText(this.dataToWrite);
         }
-        //deconnexionBtn.setOnClickListener(v -> confirmDeconnexionDialogue());
+        // Fin de la condition Lecture/Ecriture du Tag
 
+        //deconnexionBtn.setOnClickListener(v -> confirmDeconnexionDialogue());
+        // Appels des fonctions de manière synchrone
         AsyncCallWS2 task = new AsyncCallWS2();
         task.execute();
+        // fin de l'appel des fonctions de manière synchrone
     }
-
+    // Démarrage du développement des foncions
+    // création de la fonction confirmDeconnexionDialogue
     public void confirmDeconnexionDialogue() {
         // Build an AlertDialog
         AlertDialog.Builder builder = new AlertDialog.Builder(NFCTagActivity.this);
-
         // Set a title for alert dialog
         builder.setTitle("Avertissement");
         // Ask the final question
         builder.setMessage("Voulez-vous vraiment vous déconnecter ?");
-
         // Set the alert dialog yes button click listener
         builder.setPositiveButton("oui", (dialog, which) -> {
             AsyncCallWSDeconnexion2 task = new AsyncCallWSDeconnexion2();
             task.execute();
         });
-
         // Set the alert dialog no button click listener
         builder.setNegativeButton("non", (dialog, which) -> dialog.dismiss());
-
         AlertDialog dialog = builder.create();
         // Display the alert dialog on interface
         dialog.show();
     }
-
+    // Fin de la fonction ConfirmDeconnexionDialog
     @Override
+    // Alimentation de la fonction @Override onTagRead
     public void onTagRead(final String tagId, String tagRead) {
         if (!this.isReadingMode())
             return;
@@ -174,31 +182,31 @@ public class NFCTagActivity extends AppCompatActivity implements
             NFCTagActivity.this.finish();
         }, 10);
     }
+    // Fin de l'alimentation de la fonction onTagRead
 
     @SuppressLint("StaticFieldLeak")
+    // Appeles des fonctions de façons asunchrone
     class AsyncCallWSDirectSearch extends AsyncTask<String, Void, String> {
         private final ProgressDialog Dialog = new ProgressDialog(NFCTagActivity.this);
-
         @Override
         protected String doInBackground(String... url) {
             getUoByCard();
             return null;
         }
-
         @Override
         protected void onPreExecute() {
             Dialog.setMessage("chargement...");
             Dialog.show();
         }
-
         @Override
         protected void onPostExecute(String result) {
             Dialog.dismiss();
         }
     }
-
+    // Fin de l'appel des fonctions de façons asynchrones
 
     @SuppressLint("StaticFieldLeak")
+    // Appel de la fonction deconnerxionUser de façon synchrone
     class AsyncCallWSDeconnexion2 extends AsyncTask<String, Void, String> {
         private final ProgressDialog Dialog = new ProgressDialog(NFCTagActivity.this);
 
@@ -219,12 +227,18 @@ public class NFCTagActivity extends AppCompatActivity implements
             Dialog.dismiss();
         }
     }
+    // fin de l'appel de la fonction deconnexionUser de façon synchrone
 
+    // Création de la fonction deconnexionUser
     public void deconnexionUser() {
         Cursor res = myDb.getAllData();
         if (res.moveToLast()) {
-            String URL = "http://ibusinesscompanies.com:18080/cash-ws/CashWalletServiceWS?wsdl";
+
+            // http://50.116.97.25:8080/cash-ws/CashWalletServiceWS?wsdl // server de test
+            // String URL = "http://ibusinesscompanies.com:18080/cash-ws/CashWalletServiceWS?wsdl"; // serveur de prod
+            String URL = "http://50.116.97.25:8080/cash-ws/CashWalletServiceWS?wsdl"; // serveur de test
             String NAMESPACE = "http://runtime.services.cash.innov.sn/";
+
             String SOAP_ACTION = "";
             String METHOD_NAME = "deconnexionUser";
             SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
@@ -269,7 +283,9 @@ public class NFCTagActivity extends AppCompatActivity implements
             }
         }
     }
+    // Fin de la création de la fonction deconnexionUser
 
+    // Création de la fonction deconnxionFailed
     public void deconnexionFailed() {
         AlertDialog alertDialog = new AlertDialog.Builder(NFCTagActivity.this).create();
         alertDialog.setTitle("Alerte");
@@ -279,24 +295,22 @@ public class NFCTagActivity extends AppCompatActivity implements
                 (dialog, which) -> dialog.dismiss());
         alertDialog.show();
     }
-
+    // Fin de la crétation de la fonction deconnexionFailed
 
     @SuppressLint("StaticFieldLeak")
+    // Appelle de la focntion gettAllListAccount de façon asynchrone
     class AsyncCallWS2 extends AsyncTask<String, Void, String> {
         private final ProgressDialog Dialog = new ProgressDialog(NFCTagActivity.this);
-
         @Override
         protected String doInBackground(String... url) {
             getAllListAccount();
             return null;
         }
-
         @Override
         protected void onPreExecute() {
             Dialog.setMessage("chargement...");
             Dialog.show();
         }
-
         @Override
         protected void onPostExecute(String result) {
             Dialog.dismiss();
@@ -331,8 +345,12 @@ public class NFCTagActivity extends AppCompatActivity implements
         if (res.moveToLast()) {
             String amount = res.getString(9);
 
-            String URL = "http://ibusinesscompanies.com:18080/cash-ws/CashWalletServiceWS?wsdl";
+            // http://50.116.97.25:8080/cash-ws/CashWalletServiceWS?wsdl // server de test
+            // String URL = "http://ibusinesscompanies.com:18080/cash-ws/CashWalletServiceWS?wsdl"; // serveur de prod
+            String URL = "http://50.116.97.25:8080/cash-ws/CashWalletServiceWS?wsdl"; // serveur de test
             String NAMESPACE = "http://runtime.services.cash.innov.sn/";
+
+
             String SOAP_ACTION = "";
             String METHOD_NAME = "getUoByCard";
             SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
@@ -404,8 +422,11 @@ public class NFCTagActivity extends AppCompatActivity implements
         Cursor res = myDb.getAllData();
         if (res.moveToLast()) {
 
-            String URL = "http://ibusinesscompanies.com:18080/cash-ws/CashWalletServiceWS?wsdl";
+            // http://50.116.97.25:8080/cash-ws/CashWalletServiceWS?wsdl // server de test
+            // String URL = "http://ibusinesscompanies.com:18080/cash-ws/CashWalletServiceWS?wsdl"; // serveur de prod
+            String URL = "http://50.116.97.25:8080/cash-ws/CashWalletServiceWS?wsdl"; // serveur de test
             String NAMESPACE = "http://runtime.services.cash.innov.sn/";
+
             String SOAP_ACTION = "";
             String METHOD_NAME = "W2WPaiementMarchandWithCard";
             SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
@@ -497,8 +518,12 @@ public class NFCTagActivity extends AppCompatActivity implements
     public void getAllListAccount() {
         Cursor res = myDb.getAllData();
         if (res.moveToLast()) {
-            String URL = "http://ibusinesscompanies.com:18080/cash-ws/CashWalletServiceWS?wsdl";
+
+            // http://50.116.97.25:8080/cash-ws/CashWalletServiceWS?wsdl // server de test
+            // String URL = "http://ibusinesscompanies.com:18080/cash-ws/CashWalletServiceWS?wsdl"; // serveur de prod
+            String URL = "http://50.116.97.25:8080/cash-ws/CashWalletServiceWS?wsdl"; // serveur de test
             String NAMESPACE = "http://runtime.services.cash.innov.sn/";
+
             String SOAP_ACTION = "";
             String METHOD_NAME = "getAllListAccount";
             SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
@@ -550,8 +575,12 @@ public class NFCTagActivity extends AppCompatActivity implements
     public void consultationSolde() {
         Cursor res = myDb.getAllData();
         if (res.moveToLast()) {
-            String URL = "http://ibusinesscompanies.com:18080/cash-ws/CashWalletServiceWS?wsdl";
+
+            // http://50.116.97.25:8080/cash-ws/CashWalletServiceWS?wsdl // server de test
+            // String URL = "http://ibusinesscompanies.com:18080/cash-ws/CashWalletServiceWS?wsdl"; // serveur de prod
+            String URL = "http://50.116.97.25:8080/cash-ws/CashWalletServiceWS?wsdl"; // serveur de test
             String NAMESPACE = "http://runtime.services.cash.innov.sn/";
+
             String SOAP_ACTION = "";
             String METHOD_NAME = "consultationSolde";
             SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);
@@ -605,8 +634,12 @@ public class NFCTagActivity extends AppCompatActivity implements
     void getCommission() {
         Cursor res = myDb.getAllData();
         if (res.moveToLast()) {
-            String URL = "http://ibusinesscompanies.com:18080/cash-ws/CashWalletServiceWS?wsdl";
+
+            // http://50.116.97.25:8080/cash-ws/CashWalletServiceWS?wsdl // server de test
+            // String URL = "http://ibusinesscompanies.com:18080/cash-ws/CashWalletServiceWS?wsdl"; // serveur de prod
+            String URL = "http://50.116.97.25:8080/cash-ws/CashWalletServiceWS?wsdl"; // serveur de test
             String NAMESPACE = "http://runtime.services.cash.innov.sn/";
+
             String SOAP_ACTION = "";
             String METHOD_NAME = "getCommissionsTTC";
             SoapObject request = new SoapObject(NAMESPACE, METHOD_NAME);

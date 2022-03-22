@@ -211,7 +211,9 @@ public class LoginActivity extends AppCompatActivity {
 
     // Création de la fonction loginAction
     private void loginAction() {
-        String URL = "http://ibusinesscompanies.com:18080/cash-ws/CashWalletServiceWS?wsdl";
+        // http://50.116.97.25:8080/cash-ws/CashWalletServiceWS?wsdl // server de test
+       // String URL = "http://ibusinesscompanies.com:18080/cash-ws/CashWalletServiceWS?wsdl"; // serveur de prod
+        String URL = "http://50.116.97.25:8080/cash-ws/CashWalletServiceWS?wsdl"; // serveur de test
         String NAMESPACE = "http://runtime.services.cash.innov.sn/";
         String SOAP_ACTION = "";
         String METHOD_NAME = "login";
@@ -309,7 +311,12 @@ public class LoginActivity extends AppCompatActivity {
                 runOnUiThread(this::OnUserSession);
             } else if (erreur.equals("10")) {
                 // Doit appeler la fonction changePasswordDialog
-                runOnUiThread(this::changePasswordDialog);
+                //runOnUiThread(this::changePasswordDialog);
+                // Doit appeler la fonction changeOTPDialog
+                /* Ceci est est un test pour se passer du mot de passe */
+                Intent i = new Intent(LoginActivity.this, Test_NFC_Tag_Activity.class);
+                startActivity(i);
+                /* Fin du Test pour se passer du mot de passe expirer */
             } else if (erreur.equals("11")) {
                 // Doit appeler la fonction changeOTPDialog
                 runOnUiThread(this::changeOTPDialog);
@@ -338,7 +345,9 @@ public class LoginActivity extends AppCompatActivity {
 
         if (res.moveToLast()) {
 
-            String URL = "http://ibusinesscompanies.com:18080/cash-ws/CashWalletServiceWS?wsdl";
+            // http://50.116.97.25:8080/cash-ws/CashWalletServiceWS?wsdl // server de test
+            // String URL = "http://ibusinesscompanies.com:18080/cash-ws/CashWalletServiceWS?wsdl"; // serveur de prod
+            String URL = "http://50.116.97.25:8080/cash-ws/CashWalletServiceWS?wsdl"; // serveur de test
             String NAMESPACE = "http://runtime.services.cash.innov.sn/";
             String SOAP_ACTION = "";
             String METHOD_NAME = "deconnexionUser";
