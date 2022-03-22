@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="500dp"
-    android:background="#FFFFFF"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
     tools:context=".ValidePayementActivity">
 
     <LinearLayout
@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/marron">
+        android:background="#5F0C0C">
 
         <ImageView
             android:id="@+id/btn_back_img"
@@ -40,41 +40,44 @@
             android:textSize="20sp" />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imgRead"
-        android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:layout_margin="0dp"
-        android:layout_marginTop="80dp"
-        android:layout_centerInParent="true"
-        android:src="@drawable/nfc08" />
     <TextView
         android:id="@+id/solde"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@+id/imgRead"
-        android:text="2 000"
-        android:textColor="@color/marron"
-        android:textSize="20sp"
+        android:text="20000"
+        android:textAllCaps="true"
+        android:textColor="#5F0C0C"
+        android:textSize="22sp"
         android:fontFamily="@font/credit_font"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="0dp"
         android:gravity="center"
-        android:layout_marginStart="10dp" />
+        android:layout_marginStart="0dp" />
+    <ImageView
+        android:id="@+id/imgRead"
+        android:layout_below="@+id/solde"
+        android:padding="0dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginRight="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_margin="0dp"
+        android:background="#FFFFFF"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/modern_icon_03" />
     <TextView
         android:id="@+id/tvText"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_below="@+id/solde"
-        android:text="Metter la carte derrière l'appareil pour effectuer le Paiement"
-        android:textColor="#000000"
-        android:textSize="15sp"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"
-        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imgRead"
+        android:text="Metter la carte derrière l'appareil pour effectuer le Paiement."
+        android:textColor="#5F0C0C"
+        android:textSize="16sp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="0dp"
         android:gravity="center"
-        android:layout_marginStart="10dp" />
+        android:layout_marginStart="0dp" />
 
     <!--<RelativeLayout
         android:id="@+id/gif"
