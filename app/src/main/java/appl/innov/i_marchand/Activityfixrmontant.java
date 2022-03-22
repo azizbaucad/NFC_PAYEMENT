@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import appl.innov.i_marchand.helper.DatabaseHelper;
 
@@ -20,6 +22,20 @@ public class Activityfixrmontant extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fxrmontant);
+        // Mettre le button back
+        ImageView back = (ImageView)findViewById(R.id.btn_back_img);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Activityfixrmontant.this, Test_NFC_Tag_Activity.class);
+                startActivity(i);
+                finish();
+
+            }
+        });
+        // Fin du button back
+
+        // les fonctions de prospere
         editTextmontantfix = findViewById(R.id.edit_fix_montant);
         myDb = new DatabaseHelper(this);
         fixer = findViewById(R.id.fixmontant);
