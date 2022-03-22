@@ -6,7 +6,7 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>-->
     <!--<color name="black">#FF000000</color>-->
-    <color name="marron">#C85F0C0C</color>
+    <color name="marron">#C15F0C0C</color>
     <!--<color name="white">#FFFFFFFF</color>-->
 
     <color name="colorWhite">#FFFFFFFF</color>
@@ -14,10 +14,10 @@
     <color name="darker_gray">#BF9F9F</color>
     <color name="colorGray">#433D3D</color>
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#ff563f</color>
-    <color name="primary_txt">#212121</color>
-    <color name="orange">#FF9800</color>
+    <color name="colorPrimaryDark">#5F0C0C</color>
+    <color name="colorAccent">#5F0C0C</color>
+    <color name="primary_txt">#5F0C0C</color>
+    <color name="orange">#C15F0C0C</color>
     <color name="fb_blue">#475993</color>
     <color name="edit_text_hint">#999999</color>
     <color name="edit_text_txt">#999999</color>
@@ -27,8 +27,8 @@
     <color name="account">#999999</color>
 
     <color name="alternative_white_light">#EEE</color>
-    <color name="purple_500">#C85F0C0C</color>
-    <color name="purple_700">#C85F0C0C</color>
+    <color name="purple_500">#5F0C0C</color>
+    <color name="purple_700">#5F0C0C</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>

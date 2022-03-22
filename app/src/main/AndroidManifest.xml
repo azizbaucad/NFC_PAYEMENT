@@ -21,7 +21,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ValidePayementActivity"></activity>
+        <activity android:name=".ValidePayementActivity" />
         <!-- activity android:name=".ActivitySplashScreen" / -->
         <!-- activity android:name=".LoginActivity"/ -->
         <activity android:name=".MainActivity" />
@@ -30,7 +30,7 @@
         <!-- activity android:name=".SplashScreen.FailureSplash" / -->
         <!-- activity android:name=".SplashScreen.MainSplash" / -->
         <!-- activity android:name=".SplashScreen.SuccessSplash" / -->
-        <!-- activity android:name=".Activityfixrmontant" / -->
+        <activity android:name=".Activityfixrmontant" />
         <activity android:name=".Test_NFC_Tag_Activity" />
         <activity
             android:name=".LoginActivity"

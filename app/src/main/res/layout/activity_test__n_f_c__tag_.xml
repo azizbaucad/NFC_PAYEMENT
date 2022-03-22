@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Fixer avec Relative Layout -->
+<!--fin de la fixation-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,77 +13,20 @@
     android:scrollbars="none"
     tools:context=".Test_NFC_Tag_Activity">
 
-
-    <!--include layout="@layout/toolbar_with_spinner" /-->
-
-    <RelativeLayout
+    <!--<RelativeLayout
+        android:id="@id/rl_form"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
-        android:background="#FFFFFF">
-
-
-        <!--&lt;!&ndash; Right most ImageView &ndash;&gt;
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="24dp"
-            android:layout_marginEnd="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/logout" />-->
-
-
-        <!--<ImageView
-             android:id="@+id/iv_card_type"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_marginTop="0dp"
-            android:layout_margin="0dp"
-             android:src="@drawable/logpro" />-->
-
+        android:background="#FFFFFF">-->
 
         <RelativeLayout
-            android:id="@+id/rl_form"
+            android:id="@+id/sec_form"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="260dp"
             android:layout_marginTop="0dp"
-            android:background="@color/marron">
+            android:background="#5F0C0C">
 
-
-            <!--<RelativeLayout
-                android:id="@+id/rl_back"
-                android:layout_width="360dp"
-                android:layout_height="307.2dp"
-                android:layout_centerInParent="true"
-                android:alpha="0"
-                android:background="@drawable/backdebit"
-                android:backgroundTint="@color/alternative_white_light">
-
-                <View
-                    android:id="@+id/view_black"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="12.5dp"
-                    android:layout_marginTop="65dp"
-                    android:layout_marginRight="12.5dp"
-                    android:background="@android:color/black" />
-
-               &lt;!&ndash; <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/tv_card_cv"
-                    android:layout_marginTop="120dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="15dp"
-                    android:background="@android:color/white"
-                    android:text="222"
-                    android:fontFamily="@font/credit_font"
-                    android:textColor="@android:color/black"
-                    android:padding="10dp"/>&ndash;&gt;
-
-            </RelativeLayout>-->
             <ImageView
                 android:id="@+id/iv_card_type"
                 android:layout_width="40dp"
@@ -115,74 +61,17 @@
                     android:layout_marginTop="20dp"
                     android:orientation="horizontal">
 
-
-                    <!--<ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="100dp"
-                        android:id="@+id/iv_card_type"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginBottom="50dp"
-                        android:layout_marginRight="30dp"
-
-                        android:src="@drawable/chip" />-->
-
-                    <!--<TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tv_card_one"
-                        android:layout_weight="1"
-                        android:lines="1"
-                        android:padding="7.5dp"
-                        android:textSize="22sp"
-                        android:layout_marginTop="100dp"
-                        android:fontFamily="@font/credit_font"
-                        android:textColor="@android:color/black"
-                        android:text="45256984555666"
-                        android:maxEms="10" />-->
-
-                    <!--<TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tv_card_two"
-                        android:layout_weight="1"
-                        android:lines="1"
-                        android:padding="7.5dp"
-                        android:textSize="22sp"
-                        android:layout_marginTop="100dp"
-                        android:fontFamily="@font/credit_font"
-                        android:textColor="@android:color/black"
-                        android:text="45256984555666"
-                        android:maxEms="10" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tv_card_three"
-                        android:layout_weight="1"
-                        android:lines="1"
-                        android:padding="7.5dp"
-                        android:textSize="22sp"
-                        android:layout_marginTop="100dp"
-                        android:fontFamily="@font/credit_font"
-                        android:textColor="@android:color/black"
-                        android:text="45256984555666"
-                        android:maxEms="10"
-
-                        />-->
                     <ImageView
                         android:id="@+id/chip01"
-                        android:layout_width="200dp"
-                        android:layout_marginTop="90dp"
-                        android:layout_height="wrap_content"
+                        android:layout_width="100dp"
+                        android:layout_marginTop="120dp"
+                        android:layout_height="100dp"
                         android:layout_alignParentLeft="true"
-                        android:layout_weight="1"
                         android:layout_marginLeft="0dp"
                         android:layout_marginRight="0dp"
                         android:layout_marginBottom="0dp"
                         android:src="@drawable/chip01" />
-                    <TextView
+                    <!--<TextView
                         android:id="@+id/solde"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
@@ -197,17 +86,16 @@
                         android:textColor="@android:color/black"
                         android:textSize="18sp"
 
-                        />
+                        />-->
 
                     <TextView
                         android:id="@+id/tv_card_four"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignParentRight="true"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="false"
                         android:layout_marginTop="30dp"
-                        android:layout_weight="1"
                         android:fontFamily="@font/credit_font"
-                        android:gravity="right"
+                        android:gravity="center"
                         android:lines="1"
                         android:padding="0dp"
                         android:text="0123456789"
@@ -219,261 +107,54 @@
 
                 </LinearLayout>
 
-                <!--<LinearLayout
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_marginTop="60dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginRight="40sp"
-                    android:layout_marginBottom="0dp"
-                    android:orientation="horizontal"
-                    >
-                    <ImageView
-                        android:layout_marginTop="10dp"
-                        android:id="@+id/iv_card_type"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_alignParentRight="true"
-                        android:src="@drawable/chip" />
-
-                </LinearLayout>-->
-
-                <!--<TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:lines="1"
-                    android:id="@+id/tv_card_owner"
-                    android:padding="10dp"
-                    android:layout_marginLeft="100dp"
-                    android:fontFamily="@font/credit_font"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginRight="20dp"
-                    android:textColor="@android:color/black"
-                    android:text="Name Surname"
-                    android:textSize="15sp"
-                    android:textAllCaps="true"
-                    android:layout_above="@+id/lv_card_layout"/>
-
-                <ImageView
-                    android:id="@+id/iv_chip"
-                    android:layout_width="60dp"
-                    android:layout_height="match_parent"
-                    android:layout_alignTop="@+id/tv_card_owner"
-                    android:layout_alignBottom="@+id/tv_card_owner"
-                    android:layout_marginLeft="35dp"
-                    android:background="@android:color/white"
-                    android:src="@drawable/chip"/>-->
-
-                <!--<LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/lv_card_layout"
-                    android:layout_alignTop="@+id/iv_card_type"
-                    android:layout_alignBottom="@+id/iv_card_type"
-                    android:orientation="horizontal">-->
-
-                    <!--<TextView
-                        android:id="@+id/tv_card_month"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:fontFamily="@font/credit_font"
-                        android:gravity="center"
-                        android:text="12"
-                        android:textColor="@android:color/black"
-                        android:textSize="13sp" />-->
-
-                    <!--<TextView
-                        android:id="@+id/tv_bracket"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="2dp"
-                        android:layout_marginRight="2dp"
-                        android:fontFamily="@font/credit_font"
-                        android:gravity="center"
-                        android:text="/"
-                        android:textColor="@android:color/black"
-                        android:textSize="13sp" />-->
-
-                    <!--<TextView
-                        android:id="@+id/tv_card_year"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:fontFamily="@font/credit_font"
-                        android:gravity="center"
-                        android:text="20"
-                        android:textColor="@android:color/black"
-                        android:textSize="13sp" />-->
-
-               <!-- </LinearLayout>-->
-
 
             </RelativeLayout>
 
+            <!-- Mettre ici le montant et les butoon-->
+
+
+
+
+
+
+            <!-- fin de la mise en montant et bouton -->
+
         </RelativeLayout>
 
-        <androidx.core.widget.NestedScrollView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/rl_form"
-            android:paddingBottom="0dp"
-            android:scrollbars="none">
+        <!-- Modifier ici -->
 
-            <LinearLayout
-                android:id="@+id/ll_editviews"
+       <!-- <RelativeLayout
+            android:id="@+id/rl_tree_form"
+            android:layout_width="match_parent"
+            android:layout_below="@id/sec_form"
+            android:layout_height="wrap_content"
+            >-->
+
+            <!--<LinearLayout
+                android:id="@+id/montant"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
-                android:orientation="vertical">
-
-                <!--
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/til_card_no"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:hint="@string/cardno"
-                    app:counterMaxLength="19"
-                    app:helperText="@string/cardno_helper_text"
-                    android:layout_marginBottom="10dp"
-                    android:textColor="@android:color/black"
-                    android:textColorHint="@android:color/black"
-                    android:fontFamily="sans-serif"
-                    app:helperTextTextAppearance="@style/HelperStyle"
-                    app:passwordToggleDrawable="@drawable/ic_credit_card"
-                    app:counterEnabled="true">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/tev_card_no"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/ic_credit_card"
-                        android:textSize="14sp"
-                        android:textColor="@android:color/black"
-                        android:drawablePadding="10dp"
-                        android:maxLength="19"
-                        android:inputType="phone"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <LinearLayout android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/ll_card_date"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="10dp"
-                    >
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/til_card_month"
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/cardmonth"
-                        app:helperTextTextAppearance="@style/HelperStyle"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        app:counterMaxLength="2"
-                        android:textColor="@android:color/black"
-                        android:textColorHint="@android:color/black"
-                        app:passwordToggleDrawable="@drawable/ic_credit_card"
-                        app:counterEnabled="true">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/tev_card_month"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableLeft="@drawable/ic_date"
-                            android:textColorHint="@android:color/black"
-                            android:drawablePadding="10dp"
-                            android:fontFamily="sans-serif"
-                            android:textSize="14sp"
-                            android:textColor="@android:color/black"
-                            android:maxLength="2"
-                            android:inputType="number"/>
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:textSize="18sp"
-                        android:textColor="@android:color/black"
-                        android:text="/"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        />
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/til_card_year"
-                        android:layout_width="120dp"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/cardyear"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                        app:counterMaxLength="2"
-                        android:textColorHint="@android:color/black"
-                        android:textColor="@android:color/black"
-                        app:counterEnabled="true">
-
-                        <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/tev_card_year"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableLeft="@drawable/ic_date"
-                            android:drawablePadding="10dp"
-                            android:textSize="14sp"
-                            android:fontFamily="sans-serif"
-                            android:textColor="@android:color/black"
-                            android:maxLength="2"
-                            android:inputType="number"/>
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                </LinearLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/til_card_cv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/cardcv"
-                    app:counterMaxLength="3"
-                    android:layout_marginBottom="10dp"
-                    android:textColor="@android:color/black"
-                    android:textColorHint="@android:color/black"
-                    app:helperTextTextAppearance="@style/HelperStyle"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    app:passwordToggleDrawable="@drawable/ic_credit_card"
-                    app:counterEnabled="true">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/tev_card_cv"
-                        android:layout_width="150dp"
-                        android:layout_height="wrap_content"
-                        android:maxLength="3"
-                        android:textColor="@android:color/black"
-                        android:drawableLeft="@drawable/ic_key"
-                        android:fontFamily="sans-serif"
-                        android:drawablePadding="10dp"
-                        android:textSize="14sp"
-                        android:inputType="numberPassword"/>
-
-                </com.google.android.material.textfield.TextInputLayout>-->
-
-                <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="0dp"
+                android:orientation="vertical"
+                >-->
+                <!--<com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/til_card_name"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="0dp"
-                    android:layout_margin="10sp"
+                    android:layout_margin="0sp"
                     android:layout_marginTop="0dp"
                     android:fontFamily="sans-serif"
                     android:hint="@string/cardname"
                     android:textColor="@android:color/black"
                     android:textColorHint="@android:color/black"
-                    >
+                    >-->
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/tev_card_name"
+                        android:layout_marginTop="280dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:drawableLeft="@drawable/ic_credit_card"
@@ -484,21 +165,24 @@
                         android:textColor="@android:color/black"
                         android:textSize="22sp" />
 
-                </com.google.android.material.textfield.TextInputLayout>
+               <!-- </com.google.android.material.textfield.TextInputLayout>-->
 
 
 
 
-                <LinearLayout
-                    android:layout_width="fill_parent"
+                <!--<LinearLayout
+                    android:id="@+id/fix"
+                    android:layout_width="match_parent"
                     android:orientation="vertical"
-                    android:padding="10dp"
+                    android:padding="5dp"
+                    android:layout_marginTop="0dp"
                     android:layout_height="wrap_content">
+
 
                     <Button
                         android:padding="10dp"
                         android:id="@+id/btn_pay_nfc"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAllCaps="false"
                         android:text="@string/payNFC"
@@ -508,218 +192,356 @@
                     <Button
                         android:id="@+id/btn_pay"
                         android:padding="10dp"
-                        android:layout_width="fill_parent"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
                         android:textAllCaps="false"
                         android:text="@string/payTel"
                         android:textColor="@android:color/white"
                         android:textSize="18sp" />
 
+                </LinearLayout>-->
 
+          <!--  </LinearLayout>-->
+          <!-- Essayer les Tables Row -->
+          <!-- Fin de l'essaie -->
 
+            <!-- Tester les buttons avce card -->
 
-
-
+            <LinearLayout
+                android:id="@+id/card_button"
+                android:layout_below="@+id/sec_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="330dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/carView"
-                    android:layout_width="fill_parent"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="0dp"
+                    app:cardElevation="5dp"
                     android:padding="10dp"
-                    android:layout_marginTop="0dp"
-                    app:cardBackgroundColor="#FFFFFF"
-                    app:cardCornerRadius="2dp"
-                    app:cardElevation="2dp"
-                    app:cardMaxElevation="0dp"
+                    android:layout_margin="0dp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="8dp"
+                    app:cardBackgroundColor="#5F0C0C"
+                    app:cardMaxElevation="2dp"
                     app:cardPreventCornerOverlap="true"
                     app:cardUseCompatPadding="true">
 
-                    <RelativeLayout
-                        android:id="@+id/list_item_lin"
+                    <nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup
+                        android:id="@+id/themedButtonGroup"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="0dp"
-                        android:padding="0dp"
-                        android:background="#FFFFFF"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:background="#5F0C0C"
+                        app:alignItems="center">
+
+                        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                            android:id="@+id/btn_pay_nfc"
+                            android:layout_width="200dp"
+                            app:toggle_padding="0dp"
+                            android:layout_height="80dp"
+                            app:toggle_borderWidth="0dp"
+                            app:toggle_btnCornerRadius="0dp"
+                            app:layout_flexGrow="1"
+                            app:toggle_backgroundColor="@color/marron"
+                            app:toggle_selectedTextColor="@color/marron"
+                            app:toggle_selectedBackgroundColor="@color/marron"
+                            app:toggle_iconGravity="top|center"
+                            app:toggle_icon="@drawable/nfc_icon_one"
+                            app:toggle_iconPaddingTop="0dp"
+                            app:toggle_iconPaddingBottom="40dp"
+                            app:toggle_iconPaddingHorizontal="30dp"
+                            app:toggle_textPaddingBottom="10dp"
+                            app:toggle_text="Paiement NFC"
+                            app:toggle_textColor="@color/alternative_white_light"
+                            app:toggle_textGravity="bottom|center" />
+                        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                            android:id="@+id/btn_pay_nfc"
+                            android:layout_width="200dp"
+                            app:toggle_padding="0dp"
+                            android:layout_height="80dp"
+                            app:toggle_borderWidth="0dp"
+                            app:toggle_btnCornerRadius="0dp"
+                            app:layout_flexGrow="1"
+                            app:toggle_backgroundColor="@color/marron"
+                            app:toggle_selectedTextColor="@color/marron"
+                            app:toggle_selectedBackgroundColor="@color/marron"
+                            app:toggle_iconGravity="top|center"
+                            app:toggle_icon="@drawable/ic_phone"
+                            app:toggle_iconPaddingTop="0dp"
+                            app:toggle_iconPaddingBottom="40dp"
+                            app:toggle_iconPaddingHorizontal="30dp"
+                            app:toggle_textPaddingBottom="10dp"
+                            app:toggle_text="Paiement Téléphone"
+                            app:toggle_textColor="@color/alternative_white_light"
+                            app:toggle_textGravity="bottom|center" />
+
+                        <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                            android:id="@+id/btn_fix_montant"
+                            android:layout_width="200dp"
+                            app:toggle_padding="0dp"
+                            android:layout_height="80dp"
+                            app:toggle_borderWidth="0dp"
+                            app:toggle_btnCornerRadius="0dp"
+                            app:layout_flexGrow="1"
+                            app:toggle_backgroundColor="@color/marron"
+                            app:toggle_selectedTextColor="@color/marron"
+                            app:toggle_selectedBackgroundColor="@color/marron"
+                            app:toggle_iconGravity="top|center"
+                            app:toggle_icon="@drawable/ic_check_circle_outline_24px"
+                            app:toggle_iconPaddingTop="0dp"
+                            app:toggle_iconPaddingBottom="40dp"
+                            app:toggle_iconPaddingHorizontal="30dp"
+                            app:toggle_textPaddingBottom="10dp"
+                            app:toggle_text="Fixer Montant"
+                            app:toggle_textColor="@color/alternative_white_light"
+                            app:toggle_textGravity="bottom|center" />
 
 
-                        <TextView
-                            android:id="@+id/list_item_"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:fontFamily="sans-serif"
-                            android:padding="5dp"
-                            android:text="@string/Transfer"
-                            android:textAllCaps="false"
-                            android:textColor="@color/marron"
-                            android:textSize="18sp"
-
-                            />
+                    </nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup>
 
 
-                        <TextView
-                            android:id="@+id/list_item__"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="0dp"
-                            android:fontFamily="sans-serif"
-                            android:gravity="right"
-                            android:padding="5dp"
-                            android:text="@string/solde"
-                            android:textAllCaps="false"
-                            android:textColor="@color/marron"
-                            android:textSize="18sp"
 
-                            />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="20dp"
-                                android:gravity="left"
-                                android:padding="10dp"
-                                android:text="mars 14, 19:58"
-                                android:textAllCaps="false"
-                                android:textColor="@color/colorGray"
-                                android:textSize="15sp" />
-                        </LinearLayout>
-
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/list_item_lin"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="60dp"
-                        android:padding="10dp"
-                        android:background="#FFFFFF"
-                        android:orientation="horizontal">
-
-
-                        <TextView
-                            android:id="@+id/list_item_"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:fontFamily="sans-serif"
-                            android:padding="5dp"
-                            android:text="@string/Retrait"
-                            android:textAllCaps="false"
-                            android:textColor="@color/marron"
-                            android:textSize="18sp"
-
-                            />
-
-
-                        <TextView
-                            android:id="@+id/list_item__"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="0dp"
-                            android:fontFamily="sans-serif"
-                            android:gravity="right"
-                            android:padding="5dp"
-                            android:text="-50000"
-                            android:textAllCaps="false"
-                            android:textColor="@color/marron"
-                            android:textSize="18sp"
-
-                            />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="20dp"
-                                android:gravity="left"
-                                android:padding="10dp"
-                                android:text="mars 14, 19:58"
-                                android:textAllCaps="false"
-                                android:textColor="@color/colorGray"
-                                android:textSize="15sp" />
-                        </LinearLayout>
-
-
-                    </RelativeLayout>
-
-                    <RelativeLayout
-                        android:id="@+id/list_item_lin"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="120dp"
-                        android:padding="10dp"
-                        android:background="#FFFFFF"
-                        android:orientation="horizontal">
-
-
-                        <TextView
-                            android:id="@+id/list_item_"
-                            android:layout_width="wrap_content"
-                            android:layout_height="match_parent"
-                            android:fontFamily="sans-serif"
-                            android:padding="5dp"
-                            android:text="@string/Transfer"
-                            android:textAllCaps="false"
-                            android:textColor="@color/marron"
-                            android:textSize="18sp"
-
-                            />
-
-
-                        <TextView
-                            android:id="@+id/list_item__"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="0dp"
-                            android:fontFamily="sans-serif"
-                            android:gravity="right"
-                            android:padding="5dp"
-                            android:text="2500"
-                            android:textAllCaps="false"
-                            android:textColor="@color/marron"
-                            android:textSize="18sp"
-
-                            />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="20dp"
-                                android:gravity="left"
-                                android:padding="10dp"
-                                android:text="mars 14, 19:58"
-                                android:textAllCaps="false"
-                                android:textColor="@color/colorGray"
-                                android:textSize="15sp" />
-                        </LinearLayout>
-
-
-                    </RelativeLayout>
 
 
                 </androidx.cardview.widget.CardView>
-                </LinearLayout>
 
             </LinearLayout>
 
-        </androidx.core.widget.NestedScrollView>
 
 
-    </RelativeLayout>
+            <!-- fin du test avec les buttons avec du card -->
 
-</androidx.core.widget.NestedScrollView>
+
+
+
+
+      <!-- </RelativeLayout> -->
+
+
+
+
+
+        <!-- fin Modifier ici -->
+
+    <!--</RelativeLayout>-->
+
+    <!-- Mettre ici le Scrol -->
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="0dp"
+        android:padding="0dp"
+        android:layout_gravity="center"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:layout_marginTop="420dp"
+        android:scrollbars="none">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/carView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="5dp"
+            app:cardMaxElevation="2dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:id="@+id/list_item_lin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
+                android:padding="10dp"
+                android:background="#FFFFFF"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/list_item_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif"
+                    android:padding="5dp"
+                    android:text="@string/Transfer"
+                    android:textAllCaps="false"
+                    android:textColor="@color/marron"
+                    android:textSize="18sp"
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/list_item__"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:text="@string/solde"
+                    android:textAllCaps="false"
+                    android:textColor="@color/marron"
+                    android:textSize="18sp"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/ll_editviews">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="left"
+                        android:padding="10dp"
+                        android:text="mars 14, 19:58"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorGray"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/list_item_lin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="60dp"
+                android:padding="10dp"
+                android:background="#FFFFFF"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/list_item_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif"
+                    android:padding="5dp"
+                    android:text="@string/Retrait"
+                    android:textAllCaps="false"
+                    android:textColor="@color/marron"
+                    android:textSize="18sp"
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/list_item__"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:text="-50000"
+                    android:textAllCaps="false"
+                    android:textColor="@color/marron"
+                    android:textSize="18sp"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="left"
+                        android:padding="10dp"
+                        android:text="mars 14, 19:58"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorGray"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/list_item_lin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="120dp"
+                android:padding="10dp"
+                android:background="#FFFFFF"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/list_item_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="sans-serif"
+                    android:padding="5dp"
+                    android:text="@string/Transfer"
+                    android:textAllCaps="false"
+                    android:textColor="@color/marron"
+                    android:textSize="18sp"
+
+                    />
+
+
+                <TextView
+                    android:id="@+id/list_item__"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="right"
+                    android:padding="5dp"
+                    android:text="2500"
+                    android:textAllCaps="false"
+                    android:textColor="@color/marron"
+                    android:textSize="18sp"
+
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:gravity="left"
+                        android:padding="10dp"
+                        android:text="mars 14, 19:58"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorGray"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+        <!-- </LinearLayout>
+
+     </LinearLayout>-->
+
+    </androidx.core.widget.NestedScrollView>
+    <!-- Fin de la mise du scroll -->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
