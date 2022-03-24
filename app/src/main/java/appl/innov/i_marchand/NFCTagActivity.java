@@ -206,7 +206,7 @@ public class NFCTagActivity extends AppCompatActivity implements
     // Fin de l'appel des fonctions de façons asynchrones
 
     @SuppressLint("StaticFieldLeak")
-    // Appel de la fonction deconnerxionUser de façon synchrone
+    // Appel de la fonction deconnerxionUser de façon Asynchrone
     class AsyncCallWSDeconnexion2 extends AsyncTask<String, Void, String> {
         private final ProgressDialog Dialog = new ProgressDialog(NFCTagActivity.this);
 
@@ -298,7 +298,7 @@ public class NFCTagActivity extends AppCompatActivity implements
     // Fin de la crétation de la fonction deconnexionFailed
 
     @SuppressLint("StaticFieldLeak")
-    // Appelle de la focntion gettAllListAccount de façon asynchrone
+    // Appelle de la focntion getAllListAccount de façon Asynchrone
     class AsyncCallWS2 extends AsyncTask<String, Void, String> {
         private final ProgressDialog Dialog = new ProgressDialog(NFCTagActivity.this);
         @Override
@@ -316,8 +316,10 @@ public class NFCTagActivity extends AppCompatActivity implements
             Dialog.dismiss();
         }
     }
+    // Fin de l'appel de la fonction getAllListAccount
 
     @SuppressLint("StaticFieldLeak")
+    // Appel de la fonction getCommission et payerDirectement de façon Async
     class AsyncCallWS extends AsyncTask<String, Void, String> {
         private final ProgressDialog Dialog = new ProgressDialog(NFCTagActivity.this);
 
@@ -327,19 +329,19 @@ public class NFCTagActivity extends AppCompatActivity implements
             payerDirectement();
             return null;
         }
-
         @Override
         protected void onPreExecute() {
             Dialog.setMessage("chargement...");
             Dialog.show();
         }
-
         @Override
         protected void onPostExecute(String result) {
             Dialog.dismiss();
         }
     }
+    // Fin de l'appel de la fonction getCommission et payerDirectement de façon Async
 
+    // Creation de la fonction getUoByCard
     public void getUoByCard() {
         Cursor res = myDb.getAllData();
         if (res.moveToLast()) {
@@ -415,9 +417,11 @@ public class NFCTagActivity extends AppCompatActivity implements
         }
 
     }
+    // Fin de la création de la fonction getUoByCard
 
 
     //maintenant si la carte est deja enregistrée appeler directement le ws paiementMarchand
+    // Création de la fonction payerDirectement
     public void payerDirectement() {
         Cursor res = myDb.getAllData();
         if (res.moveToLast()) {
@@ -514,7 +518,9 @@ public class NFCTagActivity extends AppCompatActivity implements
             }
         }
     }
+    // Fin de la création de la fonction payerDirectement
 
+    // Création de la fonction getAllListAccount
     public void getAllListAccount() {
         Cursor res = myDb.getAllData();
         if (res.moveToLast()) {
@@ -571,7 +577,9 @@ public class NFCTagActivity extends AppCompatActivity implements
             }
         }
     }
+    // Fin de la création de la fonction getAllListAccount
 
+    // Création de la fonction consultationSolde
     public void consultationSolde() {
         Cursor res = myDb.getAllData();
         if (res.moveToLast()) {
@@ -630,7 +638,9 @@ public class NFCTagActivity extends AppCompatActivity implements
             }
         }
     }
+    // fin de la création de la fonction consultationSolde
 
+    // Création de la fonction getCommission
     void getCommission() {
         Cursor res = myDb.getAllData();
         if (res.moveToLast()) {
@@ -708,8 +718,9 @@ public class NFCTagActivity extends AppCompatActivity implements
             }
         }
     }
+    // Fin de la création de la fonction getCommission
 
-
+    // Création de la fonction onUserSession
     public void onUserSession() {
         // Build an AlertDialog
         AlertDialog.Builder builder = new AlertDialog.Builder(NFCTagActivity.this);
@@ -753,7 +764,9 @@ public class NFCTagActivity extends AppCompatActivity implements
         // Display the alert dialog on interface
         dialog.show();
     }
+    // fin de la création de la fonction onUserSession
 
+    // Création de la fonction EnrolemmentDialogue
     public void EnrolemmentDialogue() {
         // Build an AlertDialog
         AlertDialog.Builder builder = new AlertDialog.Builder(NFCTagActivity.this);
@@ -791,8 +804,9 @@ public class NFCTagActivity extends AppCompatActivity implements
         // Display the alert dialog on interface
         dialog.show();
     }
+    // Fin de la Création de la fonction EnrolemmentDialogue
 
-
+    // Création de la fonction SoldeInsuffisant
     public void SoldeInsuffisant() {
         // Build an AlertDialog
         AlertDialog.Builder builder = new AlertDialog.Builder(NFCTagActivity.this);
@@ -831,7 +845,9 @@ public class NFCTagActivity extends AppCompatActivity implements
         // Display the alert dialog on interface
         dialog.show();
     }
+    // Fin de la fonction SoldeInsuffisant
 
+    // Création de la fonction PaiementSuccess
     public void PaiementSuccess() {
         AlertDialog alertDialog = new AlertDialog.Builder(NFCTagActivity.this).create();
         alertDialog.setTitle("Succès");
@@ -847,7 +863,9 @@ public class NFCTagActivity extends AppCompatActivity implements
                 });
         alertDialog.show();
     }
+    // Fin de la focntion PaiementSuccess
 
+    // Création de la fonction openDialogueMontant
     public void openDialogueMontant() {
         AlertDialog alertDialog = new AlertDialog.Builder(NFCTagActivity.this).create();
         alertDialog.setTitle("Alert");
@@ -863,8 +881,10 @@ public class NFCTagActivity extends AppCompatActivity implements
                 });
         alertDialog.show();
     }
+    // Fin de la création de la fonction openDialogueMontant
 
     @Override
+    // Création de la fonction onTagRead @Override
     public void onTagRead(final String tagId) {
         if (!this.isReadingMode())
             return;
@@ -908,7 +928,9 @@ public class NFCTagActivity extends AppCompatActivity implements
             //NFCTagActivity.this.finish();
         }, 100);
     }
+    // Fin de la création de la fonction onTagRead
 
+    // Création de la fonction youMustFixAmount
     private void youMustFixAmount() {
         AlertDialog alertDialog = new AlertDialog.Builder(NFCTagActivity.this).create();
         alertDialog.setTitle("Alert");
@@ -924,8 +946,10 @@ public class NFCTagActivity extends AppCompatActivity implements
                 });
         alertDialog.show();
     }
+    // Fin de la création de la fonction youMustFixAmount
 
     @Override
+    // Création de la fonction onTagWriteError
     public void onTagWriteError(NFCWriteException exception) {
         this.changeStatus(false);
         this.timer.postDelayed(() -> {
@@ -936,8 +960,10 @@ public class NFCTagActivity extends AppCompatActivity implements
             NFCTagActivity.this.finish();
         }, 100);
     }
+    // Fin de la fonction onTagWriteError // Détecte les erreurs liés au Tags
 
     @Override
+    // Création de la fonction onTagWritten // Ecriture des données NFC
     public void onTagWritten() {
         this.changeStatus(true);
         this.timer.postDelayed(() -> {
@@ -948,8 +974,9 @@ public class NFCTagActivity extends AppCompatActivity implements
             NFCTagActivity.this.finish();
         }, 100);
     }
+    // Fin de la fonction onTagWritten
 
-
+    // Création de la fonction changeStatus
     private void changeStatus(boolean isOperationOk) {
         // this.promptText.setText("");
         if (isOperationOk) {
@@ -959,45 +986,57 @@ public class NFCTagActivity extends AppCompatActivity implements
             //this.promptIcon.setImageResource(R.drawable.ic_cross);
         }
     }
+    // Fin de la fonction changeStatus
 
     @Override
+    // Alimentation de la fonction onResume de type @Override
     protected void onResume() {
         this.nfcManager.onActivityResume();
         super.onResume();
-
     }
+    // Fin de l'alimentation de onResume
 
     @Override
+    // Alimentation de la fonction onPause de type @Override
     protected void onPause() {
         this.nfcManager.onActivityPause();
         super.onPause();
-
     }
+    // Fin de l'alimentation la fonction onPause
 
     @Override
+    // Alimentation de la fonction onNewIntent
     public void onNewIntent(Intent intent) {
         this.nfcManager.onActivityNewIntent(intent);
         super.onNewIntent(intent);
     }
+    // Fin de l'alimentation de la fonction onNewIntent
 
+    // Création de la fonction isReadingMode
     private boolean
     isReadingMode() {
         return (this.dataToWrite == null);
     }
+    // Fin de la fonction isReadingMode
 
+    // Création de la fonction createIntentForWriting
     public static Intent createIntentForWriting(Context context, String data, String customData) {
         Intent intent = new Intent(context, NFCTagActivity.class);
         intent.putExtra(NFCTagActivity.DATA_TO_WRITE_KEY, data);
         intent.putExtra(NFCTagActivity.ACTION_DATA_CUSTOM, customData);
         return intent;
     }
+    // Fin de la création de la fonction createIntentForWriting
 
+    // Création de la fonction creatIntentForReading
     public static Intent creatIntentForReading(Context context, String customData) {
         Intent intent = new Intent(context, NFCTagActivity.class);
         intent.putExtra(NFCTagActivity.ACTION_DATA_CUSTOM, customData);
         return intent;
     }
+    // Fin de la fonction creatIntentForReading
 
+    // Création de la fonction onBackPressed
     public void onBackPressed() {
         DrawerLayout drawerLayout = findViewById(R.id.drawer_layout);
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -1007,15 +1046,19 @@ public class NFCTagActivity extends AppCompatActivity implements
             backLogin();
         }
     }
+    // Fin de la Fonction onBackPressed
 
     @Override
+    // Création de la fonction onCreateOptionsMenu de type @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+    // Fin de la fonction onCreateOptionsMenu
 
     @Override
+    // Creation de la fonction onOptionsItemSelected de type @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (toggle.onOptionsItemSelected(item)) {
@@ -1023,9 +1066,11 @@ public class NFCTagActivity extends AppCompatActivity implements
         }
         return super.onOptionsItemSelected(item);
     }
+    // Fin de la Creation de la fonction onOptionsItemSelected
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
+    // Création de la fonction onNavigationItemSelected
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
@@ -1037,7 +1082,9 @@ public class NFCTagActivity extends AppCompatActivity implements
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+    // Fin de la creation de la fonction onNavigationItemSelected
 
+    // Création de la fonction backLogin
     private void backLogin() {
         // Build an AlertDialog
         AlertDialog.Builder builder = new AlertDialog.Builder(NFCTagActivity.this);
@@ -1072,4 +1119,6 @@ public class NFCTagActivity extends AppCompatActivity implements
         // Display the alert dialog on interface
         dialog.show();
     }
+    // Fin de la fonction backLogin
 }
+// Fin du programme

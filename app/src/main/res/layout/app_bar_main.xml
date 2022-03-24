@@ -223,7 +223,7 @@
                         />
 
                     <TextView
-                        android:id="@+id/soldeId"
+                        android:id="@+id/ap"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="20dp"

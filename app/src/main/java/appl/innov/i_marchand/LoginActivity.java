@@ -250,6 +250,7 @@ public class LoginActivity extends AppCompatActivity {
         // Try Catché la requete
 
         try {
+
             SSLContext sc = SSLContext.getInstance(SSL); // requeter par le protocole SSL
             sc.init(null, trustAllCerts, new java.security.SecureRandom());
             HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
@@ -311,11 +312,11 @@ public class LoginActivity extends AppCompatActivity {
                 runOnUiThread(this::OnUserSession);
             } else if (erreur.equals("10")) {
                 // Doit appeler la fonction changePasswordDialog
-                //runOnUiThread(this::changePasswordDialog);
+                runOnUiThread(this::changePasswordDialog);
                 // Doit appeler la fonction changeOTPDialog
                 /* Ceci est est un test pour se passer du mot de passe */
-                Intent i = new Intent(LoginActivity.this, Test_NFC_Tag_Activity.class);
-                startActivity(i);
+                /*Intent i = new Intent(LoginActivity.this, Test_NFC_Tag_Activity.class);
+                startActivity(i);*/
                 /* Fin du Test pour se passer du mot de passe expirer */
             } else if (erreur.equals("11")) {
                 // Doit appeler la fonction changeOTPDialog
