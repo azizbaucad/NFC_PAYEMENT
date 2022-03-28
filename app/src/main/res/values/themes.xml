@@ -25,17 +25,17 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.NavigationDrawer.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.NavigationDrawer.AppBarOverlay" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
 
-    <style name="Theme.NavigationDrawer.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="Theme.NavigationDrawer.PopupOverlay" parent="Theme.MaterialComponents.DayNight.NoActionBar"/>
     <style name="button_card" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="strokeColor">@color/colorPrimary</item>
         <item name="strokeWidth">2dp</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.AppBarOverlay" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+    <style name="AppTheme.PopupOverlay" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="drawerArrowStyle">@style/DrawerHamburgerStyle</item>
         <item name="android:src">@drawable/ic_ios_menu_icon</item>
 

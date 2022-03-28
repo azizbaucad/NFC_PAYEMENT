@@ -21,8 +21,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ValidePayementActivity" />
-        <!-- activity android:name=".ActivitySplashScreen" / -->
+        <activity android:name=".fixerMontantActivity"></activity>
+        <activity android:name=".ValidePayementActivity" /> <!-- activity android:name=".ActivitySplashScreen" / -->
         <!-- activity android:name=".LoginActivity"/ -->
         <activity android:name=".MainActivity" />
         <activity android:name=".ListTransaction" /> <!-- activity android:name=".EnrollementActivity" / -->
