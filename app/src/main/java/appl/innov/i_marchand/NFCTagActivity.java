@@ -884,6 +884,7 @@ public class NFCTagActivity extends AppCompatActivity implements
     // Fin de la création de la fonction openDialogueMontant
 
     @Override
+    
     // Création de la fonction onTagRead @Override
     public void onTagRead(final String tagId) {
         if (!this.isReadingMode())
