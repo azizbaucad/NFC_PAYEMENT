@@ -21,7 +21,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".fixerMontantActivity"></activity>
+        <activity android:name=".SaisieActivity"></activity>
+        <activity android:name=".fixerMontantActivity" />
         <activity android:name=".ValidePayementActivity" /> <!-- activity android:name=".ActivitySplashScreen" / -->
         <!-- activity android:name=".LoginActivity"/ -->
         <activity android:name=".MainActivity" />

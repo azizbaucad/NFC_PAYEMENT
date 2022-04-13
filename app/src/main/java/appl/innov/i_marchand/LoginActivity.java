@@ -169,7 +169,8 @@ public class LoginActivity extends AppCompatActivity {
 
         // Tester le SweetAlert
         //private final SweetAlertDialog pDialog = new SweetAlertDialog(LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
-        SweetAlertDialog pDialog = new SweetAlertDialog(LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
+        SweetAlertDialog pDialog = 
+        new SweetAlertDialog(LoginActivity.this, SweetAlertDialog.PROGRESS_TYPE);
 
         //La fonction doInBackground
         @Override
