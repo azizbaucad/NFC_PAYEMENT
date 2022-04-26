@@ -78,7 +78,7 @@ public class NFCTagActivity extends AppCompatActivity implements
         montant_a_payer = findViewById(R.id.montantApayer);
         myDb = new DatabaseHelper(this);
         soldeText = findViewById(R.id.soldeId);
-        fixAmount = findViewById(R.id.checkbox);
+       // fixAmount = findViewById(R.id.checkbox);
         //deconnexionBtn = findViewById(R.id.deconnexion);
         Toolbar toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
